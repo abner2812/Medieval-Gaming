@@ -1,6 +1,21 @@
+# PROJETO INTEGRADOR
+
+#  NOSSO SITE  - "MEDIEVAL GAMING"
+
+## 🧠 PROJETO DESENVOLVIDO POR:
+*   ABNER
+*   PEDRO
+*   EDUARDO
+*   VITOR
+
+### OBJETIVO DE INTERAGIR COM OS USUÁRIOSDE JOGOS PARA OFERECER PRODUTOS RELACIONADOS AOS MELHORES JOGOS DO MERCADO COM MAIS INTERATIVIDADE MAIS ACESSIVEIS E BARATOS.
+
+--- 
+
+
 # Levantamento do Bancos de Dados 
 
-### Tabelas
+## Tabelas
 #### Mais Importantes
 *   Clientes
 *   Produtos
@@ -13,3 +28,9 @@
 *   Itens do Carrinho
 *   Usuários
 *   
+## Relacionamentos
+<img src="modeloconceitual.png">
+
+## PROGRAMAS UTILIZADOS
+
+
