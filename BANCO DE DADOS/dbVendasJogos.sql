@@ -12,7 +12,7 @@ CREATE TABLE CLIENTES (
     SENHA VARCHAR(255) NOT NULL UNIQUE KEY
 );
 /*
-ATUALIZAÇÃO(05/03/2026): Tabela de produto
+ATUALIZAÇÃO(05/03/2026): Tabela de produtos
 - alterado o tipo da coluna descricao de: varchar(255) -> text.
 - adicionado 'NOT NULL' nas seguintes colunas: tamanho, descricao, classificacao_indicativa. 
 */
@@ -26,27 +26,29 @@ CREATE TABLE PRODUTOS (
     TAMANHO VARCHAR(200) NOT NULL,
     DESCRICAO TEXT 
 );
+
 /*
-CREATE TABLE TESTE
+ATUALIZAÇÃO(03/05/2026): Tabela de vendas
+	removidos os itens da tabela: id_clientes, id_produtos, quantidade, preco_unitario, 
 */
 -- Tabela VENDAS
 CREATE TABLE VENDAS (
     ID_VENDAS INT AUTO_INCREMENT PRIMARY KEY,
-    ID_CLIENTES INT NOT NULL,
-    ID_PRODUTOS INT NOT NULL,
+    -- ID_CLIENTES INT NOT NULL,
+	-- ID_PRODUTOS INT NOT NULL,
     DATAS DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     -- HORA TIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     -- QUANTIDADE INT NOT NULL,
     STATUS_PAGAMENTO ENUM('PAGO','PENDENTE','CANCELADO','EM PROCESSAMENTO'),
     METODO_PAGAMENTO ENUM('CRÉDITO','PIX'),
-    TOTAL DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (ID_CLIENTES) REFERENCES CLIENTES(ID_CLIENTES),
-    FOREIGN KEY (ID_PRODUTOS) REFERENCES PRODUTOS(ID_PRODUTOS)
+    TOTAL DECIMAL(10,2) NOT NULL
+    -- FOREIGN KEY (ID_CLIENTES) REFERENCES CLIENTES(ID_CLIENTES),
+    -- FOREIGN KEY (ID_PRODUTOS) REFERENCES PRODUTOS(ID_PRODUTOS)
 );
 
 /*
 ATUALIZAÇÃO(03/05/2026): Adicionar uma nova tabela chamada de 'vendas_detalhes'
-	Itens da tabela: id_vendas_detalhes, id_vendas, quantidade, preco_unitario. 
+	Itens da tabela: id_vendas_detalhes, id_vendas, id_clientes, id_produtos, quantidade, preco_unitario, 
 */
 
 
