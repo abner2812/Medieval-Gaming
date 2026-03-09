@@ -41,7 +41,7 @@
 
 ## OBJETIVO DO SITE:
 
-#### INTERAGIR COM OS USUÁRIOS DE JOGOS PARA OFERECER PRODUTOS RELACIONADOS AOS MELHORES JOGOS DO MERCADO COM MAIS INTERATIVIDADE MAIS ACESSIVEIS E BARATOS.
+#### INTERAGIR COM OS USUÁRIOS DE JOGOS PARA OFERECER PRODUTOS RELACIONADOS AOS MELHORES JOGOS DO MERCADO COM MAIS PRATICIDADE MAIS ACESSIVEIS E BARATOS.
 
 --- 
 ## 🌟 Objetivo do Projeto
@@ -82,25 +82,28 @@ Abaixo estão as etapas de normalização do banco de dados, aplicadas para gara
 
 ### 🔹 Normalização 1 (1FN)
 
-![Normalização 1](./imagens/normalizacao1.png)
+![Normalização 1](PRINT_IMG/primeira-normalizacao.png)
 
 ### 🔹 Normalização 2 (2FN)
 
-![Normalização 2](./imagens/normalizacao2.png)
+![Normalização 2](PRINT_IMG/segunda-normalizacao.png)
 
 ### 🔹 Normalização 3 (3FN)
 
-![Normalização 3](./imagens/normalizacao3.png)
+![Normalização 3](PRINT./imagens/normalizacao3.png)
 
 ### 🔹 Normalização 4 (4FN)
 
-![Normalização 4](./imagens/normalizacao4.png)
+![Normalização 4](PRINT_IMG/quarta-normalizacao.png)
 
 ## Relacionamentos
 <img src="PRINT_IMG/modeloconceitual.png">
 
+## Modelo Lógico (DER)
+<img src="PRINT_IMG/modelo-logico.png">
 
-## 🧱 Modelo Físico (SQL)
+
+## 🧱Modelo Físico (SQL)
 ```sql
 CREATE DATABASE IF NOT EXISTS VendasJogos;
 USE VendasJogos;
