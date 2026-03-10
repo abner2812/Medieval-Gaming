@@ -82,22 +82,22 @@ Abaixo estão as etapas de normalização do banco de dados, aplicadas para gara
 
 ### 🔹 Normalização 1 (1FN)
 
-![Normalização 1](PRINT_IMG/primeira-normalizacao.png)
+![Normalização 1](PRINT_IMG/imagem1.png)
 
 ### 🔹 Normalização 2 (2FN)
 
-![Normalização 2](PRINT_IMG/segunda-normalizacao.png)
+![Normalização 2](PRINT_IMG/imagem2.png)
 
 ### 🔹 Normalização 3 (3FN)
 
-![Normalização 3](PRINT./imagens/normalizacao3.png)
+![Normalização 3](PRINT_IMG/imagem3.png)
 
 ### 🔹 Normalização 4 (4FN)
 
-![Normalização 4](PRINT_IMG/quarta-normalizacao.png)
+![Normalização 4](PRINT_IMG/imagem4.png)
 
-## Relacionamentos
-<img src="PRINT_IMG/modeloconceitual.png">
+## Relacionamentos (Diagrama do Banco de dados)
+<img src="PRINT_IMG/diagrama.png">
 
 ## Modelo Lógico (DER)
 <img src="PRINT_IMG/modelo-logico.png">
