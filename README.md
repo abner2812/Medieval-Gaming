@@ -260,7 +260,7 @@ vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
 
 * Link do site: https://medieval-gaming.netlify.app/
 
-```
+
 * Link do repositório:
 ### Telas Iniciais e Navegação
 
