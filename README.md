@@ -258,6 +258,15 @@ vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
 
 # 📄 ESTRUTURA DO NOSSO SITE
 
+## WIREFRAMES
+
+<img src="PRINT_IMG/PAGINA INICIAL DO SITE.png" alt="Wireframe da Página Inicial" width="200px">
+<img src="PRINT_IMG/PLATAFORMA DO JOGO.png" alt="Wireframe da Página Inicial" width="200px">
+<img src="PRINT_IMG/informacao_jogo.png" alt="Wireframe da Página Inicial" width="200px">
+
+<img src="PRINT_IMG/login.png" alt="Wireframe da Página Inicial" width="300px">
+<img src="PRINT_IMG/compra.png" alt="Wireframe da Página Inicial" width="300px">
+
 * Link do site: https://medieval-gaming.netlify.app/
 
 
