@@ -14,25 +14,25 @@
   <tr>
     <td align="center">
       <a href="https://www.linkedin.com/in/abner-nunis-35b261371//" target="_blank">
-        <img src="Front-and/img/foto1git.jpg" width="100px;" alt="ABNER NUNIS"/><br>
+        <img src="PRINT_IMG/abner.jpeg" width="100px;" alt="ABNER NUNIS"/><br>
         <sub><b>ABNER</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/pedro-bezerra-da-silva/" target="_blank">
-        <img src="Front-and/img/foto2git.jpg" width="100px;" alt="PEDRO BEZERRA"/><br>
+        <img src="PRINT_IMG/pedro.jpg" width="100px;" alt="PEDRO BEZERRA"/><br>
         <sub><b>PEDRO</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/lucas-henrique-0148422b2/" target="_blank">
-        <img src="Front-and/img/foto3git.jpg" width="100px;" alt="EDUARDO MODE"/><br>
+        <img src="PRINT_IMG/mode.jpeg" width="100px;" alt="EDUARDO MODE"/><br>
         <sub><b>EDUARDO</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/nathan-furukawa/" target="_blank">
-        <img src="Front-and/img/foto4git.jpg" width="100px;" alt="VITOR SILVA"/><br>
+        <img src="PRINT_IMG/vitor.jpeg" width="100px;" alt="VITOR SILVA"/><br>
         <sub><b>VITOR</b></sub>
       </a>
     </td>
@@ -63,13 +63,13 @@
 
 ## Tabelas
 
-#### Mais Importantes
+### Mais Importantes
 *   Clientes
 *   Produtos
 *   Vendas
 *   Estoques
 
-#### Menos Importantes
+### Menos Importantes
 *   Histórico de Vendas
 *   Plataformas
 *   Categorias de Jogos
@@ -96,7 +96,7 @@ Abaixo estão as etapas de normalização do banco de dados, aplicadas para gara
 
 ![Normalização 4](PRINT_IMG/imagem4.png)
 
-## Relacionamentos (Diagrama do Banco de dados)
+## Relacionamentos (Fluxograma da Pagina Web)
 <img src="PRINT_IMG/diagrama.png">
 
 ## Modelo Lógico (DER)
@@ -194,7 +194,7 @@ CREATE TABLE REQUISITOS (
 
 ## 🛠️PROGRAMAS UTILIZADOS
 
-**Backend:**
+### **Backend:**
 * **Node.js:** Ambiente de execução JavaScript.
 * **Express.js:** Framework web para Node.js, para construção das APIs RESTful.
 * **MySQL2:** Driver para conexão e interação com o banco de dados MySQL.
@@ -204,12 +204,14 @@ CREATE TABLE REQUISITOS (
 * **Dotenv:** Módulo para carregar variáveis de ambiente de um arquivo `.env`.
 * **WS (WebSocket):** Biblioteca para implementação de comunicação em tempo real (chat).
 
-**Frontend:**
+### **Frontend:**
+
+* **PHOTSHOP:** Wireframe e Modelagem da página.
 * **HTML5:** Estrutura das páginas web.
 * **CSS3:** Estilização e design responsivo da interface do usuário.
 * **JavaScript (Vanilla JS):** Lógica interativa do lado do cliente, requisições de API (`fetch`), manipulação dinâmica do DOM, cálculo de idades.
 
-**Banco de Dados:**
+### **Banco de Dados:**
 * **MySQL:** Sistema de gerenciamento de banco de dados relacional.
 
 ## 🧑‍💻 DESENVOLVIMENTO
@@ -219,12 +221,12 @@ CREATE TABLE REQUISITOS (
 * Criação do banco de dados MySQL e definição das tabelas.
 * Implementação das rotas RESTful para clientes, produtos, vendas, estoques, histórico de vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
 * Implementação da funcionalidade de upload de fotos de perfil usando Multer.
-* Implementação da comunicação em tempo real para o chat usando WebSocket.         
+         
 ### Frontend
 * Desenvolvimento da interface do usuário usando HTML5 e CSS3.
 * Implementação da lógica interativa usando JavaScript, incluindo requisições de API para o backend, manipulação do DOM e cálculo de idades.
 * Criação de páginas para cadastro,
-login, visualização de produtos, carrinho de compras e chat.
+login, visualização de produtos, carrinho de compras.
 ### Banco de Dados
 * Criação do banco de dados e definição das tabelas com os relacionamentos adequados.
 * Inserção de dados de teste para clientes, produtos, vendas, estoques, histórico de
@@ -255,6 +257,7 @@ vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
 * Implementação de ferramentas de análise, como Google Analytics, para monitorar o tráfego do site e o comportamento dos usuários.
 
 # 📄 ESTRUTURA DO NOSSO SITE
+
 * Link do site: https://medieval-gaming.netlify.app/
 
 ```
