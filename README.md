@@ -20,19 +20,19 @@
     </td>
     <td align="center">
       <a href="https://github.com/pedro-bezerra-da-silva/" target="_blank">
-        <img src="PRINT_IMG/pedro.jpg" width="100px;" alt="PEDRO BEZERRA"/><br>
+        <img src="PRINT_IMG/pedro.jpg" width="100px;" height="auto" alt="PEDRO BEZERRA"/><br>
         <sub><b>PEDRO</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/lucas-henrique-0148422b2/" target="_blank">
-        <img src="PRINT_IMG/mode.jpeg" width="100px;" alt="EDUARDO MODE"/><br>
+        <img src="PRINT_IMG/mode.jpeg" width="100px;" height="auto" alt="EDUARDO MODE"/><br>
         <sub><b>EDUARDO</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/nathan-furukawa/" target="_blank">
-        <img src="PRINT_IMG/vitor.jpeg" width="100px;" alt="VITOR SILVA"/><br>
+        <img src="PRINT_IMG/vitor.jpeg" width="100px;" height="auto" alt="VITOR SILVA"/><br>
         <sub><b>VITOR</b></sub>
       </a>
     </td>
@@ -259,14 +259,30 @@ vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
 # 📄 ESTRUTURA DO NOSSO SITE
 
 ## WIREFRAMES
+### Wireframes das principais páginas do site, mostrando a estrutura e o layout planejados para cada seção.
 
-<img src="PRINT_IMG/PAGINA INICIAL DO SITE.png" alt="Wireframe da Página Inicial" width="200px">
-<img src="PRINT_IMG/PLATAFORMA DO JOGO.png" alt="Wireframe da Página Inicial" width="200px">
-<img src="PRINT_IMG/informacao_jogo.png" alt="Wireframe da Página Inicial" width="200px">
+#### 1. Página Inicial do Site / 2.Plataforma do Jogo / 3.Informações do Jogo.
+<tr>
+    <td>1
+        <img src="PRINT_IMG/PAGINA INICIAL DO SITE.png" alt="Wireframe da Página Inicial" width="220px">
+    </td>
+    <td>2
+        <img src="PRINT_IMG/PLATAFORMA DO JOGO.png" alt="Wireframe da Página Inicial" width="200px">
+    </td>
+    <td>3
+        <img src="PRINT_IMG/informacao_jogo.png" alt="Wireframe da Página Inicial" width="200px">
+    </td>
+</tr>
+
+#### 4 Página de Login do Site;
 
 <img src="PRINT_IMG/login.png" alt="Wireframe da Página Inicial" width="300px">
+
+#### 5 Página de Compra do Jogo.
+
 <img src="PRINT_IMG/compra.png" alt="Wireframe da Página Inicial" width="300px">
 
+#
 * Link do site: https://medieval-gaming.netlify.app/
 
 
