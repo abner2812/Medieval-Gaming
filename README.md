@@ -46,17 +46,18 @@
 --- 
 ## 🌟 Objetivo do Projeto
 
-* Oferecer uma plataforma digital onde o usuário possa registrar e acompanhar dados relacionados à sua saúde.
-* Promover a conscientização sobre a importância de hábitos saudáveis, como beber água regularmente, manter um sono adequado e praticar exercícios físicos.
-* Fornecer dados organizados que permitam o autoconhecimento e o acompanhamento do progresso pessoal ao longo do tempo.
+* Oferecer uma plataforma digital onde o usuário possa ter acesso a informações e serviços relacionados a jogos.
+* Comprar jogos digitalmente.
+* Ter uma experiência de compra simplificada e segura.
+* Ter acesso mais fácil a jogos de qualidade, com preços competitivos e uma interface amigável.
 
 ---
 
 ## 👥 Público-Alvo
 
-* Pessoas interessadas em melhorar sua qualidade de vida por meio do monitoramento de hábitos diários.
+* Pessoas interessadas em jogos online.
 * Estudantes, trabalhadores e qualquer pessoa que deseje acompanhar sua rotina de forma simples e digital.
-* Profissionais da saúde que desejam utilizar o sistema como apoio em acompanhamentos clínicos.
+* Jogadores entusiastas que buscam uma plataforma confiável para adquirir jogos e interagir com outros jogadores.
 
 # ⚙️Levantamento do Bancos de Dados
 
