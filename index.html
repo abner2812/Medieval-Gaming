@@ -6,6 +6,7 @@
     <meta name="description" content="Projeto Integrador com o tema: Loja de Jogos Online">
     <meta name="keywords" content="videogames,digital, xbox,playstation,pc,nintendo-switch,">
     <title>Medieval Gaming</title>
+    <link rel="icon" type="image/png" href="icone/dragao.ico">
     <link rel="stylesheet" href="casa.css">
 </head>
 <body>
@@ -18,15 +19,46 @@
         <div id="nintendo-switch"><input type="checkbox" value="nintendo-switch"></div>
         <div id="barra-pesquisa">
             <!-- AQUI VAI UMA BARRA DE PESQUISA
-             A FORMATACAO VAI SER UMA BORDA FINA, COM O BACKGROUND FEITO EM UMA UM POUCO MAIS CLARA DO QUE A COR
-             AO REDOR DA BARRA DA PESQUISA,-->
-             <input type="text" id="barra-pesquisa2">
+            A FORMATACAO VAI SER UMA BORDA FINA, COM O BACKGROUND FEITO EM UMA UM POUCO MAIS CLARA DO QUE A COR
+            AO REDOR DA BARRA DA PESQUISA,-->
+            <input type="text" id="barra-pesquisa2">
         </div>
-
-        <!-- area do usuario -->
+        <nav>
+            <div class="search">
+            <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="profile">
+            <span>🔔</span>
+            <span>👤</span>
+            </div>
+        </nav>
+    </header>
+        <div class="filters">
+            <button onclick="filtrar('todos')">Todos</button>
+            <button onclick="filtrar('artigos')">Artigos</button>
+            <button onclick="filtrar('videos')">Vídeos</button>
+            <button onclick="filtrar('podcasts')">Podcasts</button>
+        </div>    
+    <!-- area do usuario -->
         <div id="usuario">
             <link rel="stylesheet" href="">
         </div>
+    <!-- Cards de conteúdo -->
+        <div class="container" id="conteudo">
+        <div class="card" data-tipo="artigos">
+            <img src="https://via.placeholder.com/300x150" alt="Imagem">
+        <div class="content">
+            <h3>Título do Artigo</h3>
+            <p>Descrição breve do conteúdo...</p>
+        </div>
+        </div>
+        <div class="card" data-tipo="videos">
+        <img src="https://via.placeholder.com/300x150" alt="Imagem">
+            <div class="content">
+                <h3>Vídeo Interessante</h3>
+                <p>Resumo do vídeo...</p>
+            </div>
+        </div>    
     </header>
     
     
