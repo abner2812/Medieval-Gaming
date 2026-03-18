@@ -56,7 +56,7 @@
 ## 👥 Público-Alvo
 
 * Pessoas interessadas em jogos online.
-* Estudantes, trabalhadores e qualquer pessoa que deseje acompanhar sua rotina de forma simples e digital.
+* Estudantes, trabalhadores e qualquer pessoa que deseje jogar e interagir com mundo dos gamers de forma simples e digital.
 * Jogadores entusiastas que buscam uma plataforma confiável para adquirir jogos e interagir com outros jogadores.
 
 # ⚙️Levantamento do Bancos de Dados
