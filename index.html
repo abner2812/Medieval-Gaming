@@ -11,7 +11,8 @@
 </head>
 <body>
     <!-- barra no topo da pagina, versão da página inicial -->
-    <header id="inicio">
+    <header id="inicio"width="100px;" height="100px;">
+
         <div id="logo"><img src="" alt="logo da Medieval Gaming"></div>
         <div id="pc"><input type="checkbox" value="PC"></div>
         <div id="playstation"><input type="checkbox" value="playstation"></div>
@@ -26,27 +27,36 @@
             <!-- AQUI VAI UM BOTAO DE PESQUISA, COM O ICONE DE LUPA, O BOTAO VAI SER DO MESMO TAMANHO DA BARRA DE PESQUISA, E VAI FICAR AO LADO DIREITO DELA -->
         <div id="botao-pesquisa"><img src="icone/lupa.png" alt="botão de pesquisa"></div>
         <div id="carrinho"><img src="icone/carrinho.png" alt="carrinho de compras"></div>
-        <div id="sacola"><img src="icone/sacola.png" alt="sacola"></div>
+        <div id="login"><img src="icone/login.png" alt="login"></div>
         <div id="contato"><img src="icone/contato.png" alt="contato"></div>
         <div id="configuracoes"><img src="icone/configuracoes.png" alt="configurações"></div>
         <div id="sair"><img src="icone/sair.png" alt="sair"></div>
     </header>
-        <div class="filters">
-            <button onclick="filtrar('todos')">Todos</button>
-            <button onclick="filtrar('artigos')">Artigos</button>
-            <button onclick="filtrar('videos')">Vídeos</button>
-           
+    <!-- barra de categorias, versão da página inicial -->
+        <div id="categorias" class="frutiger-container">
             <button class="frutiger-button">
-              <div class="inner">
+            <div class="inner">
                 <div class="top-white"></div>
-                <span class="text">Nintendo Switch</span>
-              </div>
+                <span class="text">PC</span>
+            </div>
             </button>
             <button class="frutiger-button">
-              <div class="inner">
+            <div class="inner">
+                <div class="top-white"></div>
+                <span class="text">Xbox</span>
+            </div>
+            </button>
+            <button class="frutiger-button">
+            <div class="inner">
+                <div class="top-white"></div>
+                <span class="text">Nintendo Switch</span>
+            </div>
+            </button>
+            <button class="frutiger-button">
+            <div class="inner">
                 <div class="top-white"></div>
                 <span class="text">playstation</span>
-              </div>
+            </div>
             </button>
         </div>    
         <!-- From Uiverse.io by SelfMadeSystem --> 
@@ -61,52 +71,52 @@
         
         
     <main>
-            
-            <div id="destaque">
-                <link rel="stylesheet" href="">
-            </div>
-            <div>
-                <h1>Popular</h1>
+        <div id="destaque">
+            <link rel="stylesheet" href="">
+        </div>
+        <div>
+            <h1>Popular</h1>
                 <link rel="stylesheet" href=""><img src="" alt=""></link>
             </div>
-            <!-- Cards de conteúdo -->
-                <div class="container" id="conteudo">
+        <!-- POSIÇÃO DOS CARTÕES-->
+            <div class="container" id="conteudo">
                 <div class="card" data-tipo="artigos">
                     <img src="https://via.placeholder.com/300x150" alt="Imagem">
-                <div class="content">
+                    <div class="content">
                     <h3>Título do Artigo</h3>
                     <p>Descrição breve do conteúdo...</p>
                 </div>
-                </div>
+            </div>
                 <div class="card" data-tipo="videos">
-                <img src="https://via.placeholder.com/300x150" alt="Imagem">
+                    <img src="https://via.placeholder.com/300x150" alt="Imagem">
                     <div class="content">
-                        <h3>Vídeo Interessante</h3>
-                        <p>Resumo do vídeo...</p>
+                    <h3>Vídeo Interessante</h3>
+                    <p>Resumo do vídeo...</p>
                     </div>
                 </div>    
+            </div>
         <div>
             <h2>mais vendidos</h2>
             <link rel="stylesheet" href=""><img src="" alt=""></link>
         </div>
         <!-- Cards de conteúdo -->
-                <div class="container" id="conteudo">
-                    <div class="card" data-tipo="artigos">
-                        <img src="https://via.placeholder.com/300x150" alt="Imagem">
-                
-                        <div class="content">
+            <div class="container" id="conteudo">
+                <div class="card" data-tipo="artigos">
+                    <img src="https://via.placeholder.com/300x150" alt="Imagem">
+                    <div class="content">
                         <h3>Título do Artigo</h3>
                         <p>Descrição breve do conteúdo...</p>
-                    </div>
                 </div>
-                <div class="card" data-tipo="videos">
+            </div>
+            <div class="card" data-tipo="videos">
                     <img src="https://via.placeholder.com/300x150" alt="Imagem">
                         <div class="content">
-                            <h3>Vídeo Interessante</h3>
-                            <p>Resumo do vídeo...</p>
+                        <h3>Vídeo Interessante</h3>
+                        <p>Resumo do vídeo...</p>
                         </div>
+                    </div>
                 </div>    
-        </div>
+            </div>
         <div>
             <h3>categorias</h3>
             <link rel="stylesheet" href=""><img src="" alt=""></link>
@@ -118,7 +128,7 @@
                     <h3>Título do Artigo</h3>
                     <p>Descrição breve do conteúdo...</p>
                 </div>
-                </div>
+            </div>
                 <div class="card" data-tipo="videos">
                 <img src="https://via.placeholder.com/300x150" alt="Imagem">
                     <div class="content">
@@ -126,54 +136,54 @@
                         <p>Resumo do vídeo...</p>
                     </div>
                 </div>    
+            </div>
         </div>
     </main>
-    <div>
-        <h1>contatos</h1>
-    
-    </div>
-    <div>
-        <h2>informações</h2>
-    
-    </div>
 </body>
+<!-- RODAPÉ DO SITE -->
 <footer>
-    <footer class="footer">
-  <div class="footer-container">
+    <footer class="footer titulo">
+        <div>
+            <h1>contatos</h1>
+        </div>
+        <div>
+            <h2>informações</h2>
+        </div>
+
+        <div class="footer-container">
     
     <div class="footer-logo">
-      <h2>Meu Site</h2>
-      <p>Conecte-se conosco nas redes sociais:</p>
+        <h2>Meu Site</h2>
+        <p>Conecte-se conosco nas redes sociais:</p>
     </div>
 
     <div class="footer-social">
-      <a href="https://github.com" target="_blank" class="social-icon">
+        <a href="https://github.com" target="_blank" class="social-icon">
         <i class="fab fa-github"></i>
-      </a>
-      <a href="https://instagram.com" target="_blank" class="social-icon">
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
         <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://facebook.com" target="_blank" class="social-icon">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://discord.com" target="_blank" class="social-icon">
-        <i class="fab fa-discord"></i>
-      </a>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://discord.com" target="_blank" class="social-icon">
+            <i class="fab fa-discord"></i>
+        </a>
     </div>
 
     <div class="footer-apps">
-      <a href="#" class="app-btn google">
+        <a href="#" class="app-btn google">
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-      </a>
+        </a>
 
-      <a href="#" class="app-btn apple">
+        <a href="#" class="app-btn apple">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
-      </a>
+        </a>
     </div>
+</div>
 
-  </div>
-
-  <p class="footer-copy">© 2026 Meu Site — Todos os direitos reservados.</p>
+<p class="footer-copy">© 2026 Meu Site — Todos os direitos reservados.</p>
 </footer>
 
 <!-- FONT AWESOME -->
