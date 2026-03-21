@@ -14,7 +14,7 @@
   <tr>
     <td align="center">
       <a href="https://www.linkedin.com/in/abner-nunis-35b261371//" target="_blank">
-        <img src="PRINT_IMG/abner.jpeg" width="100px;" alt="ABNER NUNIS"/><br>
+        <img src="PRINT_IMG/abner.jpeg" width="100px;" height="auto" alt="ABNER NUNIS"/><br>
         <sub><b>ABNER</b></sub>
       </a>
     </td>
