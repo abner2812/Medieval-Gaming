@@ -14,25 +14,25 @@
   <tr>
     <td align="center">
       <a href="https://www.linkedin.com/in/abner-nunis-35b261371//" target="_blank">
-        <img src="PRINT_IMG/abner.jpeg" width="100px;" alt="ABNER NUNIS"/><br>
+        <img src="PRINT_IMG/abner.jpeg" width="100px;" height="auto" alt="ABNER NUNIS"/><br>
         <sub><b>ABNER</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/pedro-bezerra-da-silva/" target="_blank">
-        <img src="PRINT_IMG/pedro.jpg" width="100px;" alt="PEDRO BEZERRA"/><br>
+        <img src="PRINT_IMG/pedro.jpg" width="100px;" height="auto" alt="PEDRO BEZERRA"/><br>
         <sub><b>PEDRO</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/lucas-henrique-0148422b2/" target="_blank">
-        <img src="PRINT_IMG/mode.jpeg" width="100px;" alt="EDUARDO MODE"/><br>
+        <img src="PRINT_IMG/mode.jpeg" width="100px;" height="auto" alt="EDUARDO MODE"/><br>
         <sub><b>EDUARDO</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/nathan-furukawa/" target="_blank">
-        <img src="PRINT_IMG/vitor.jpeg" width="100px;" alt="VITOR SILVA"/><br>
+        <img src="PRINT_IMG/vitor.jpeg" width="100px;" height="auto" alt="VITOR SILVA"/><br>
         <sub><b>VITOR</b></sub>
       </a>
     </td>
@@ -46,17 +46,18 @@
 --- 
 ## 🌟 Objetivo do Projeto
 
-* Oferecer uma plataforma digital onde o usuário possa registrar e acompanhar dados relacionados à sua saúde.
-* Promover a conscientização sobre a importância de hábitos saudáveis, como beber água regularmente, manter um sono adequado e praticar exercícios físicos.
-* Fornecer dados organizados que permitam o autoconhecimento e o acompanhamento do progresso pessoal ao longo do tempo.
+* Oferecer uma plataforma digital onde o usuário possa ter acesso a informações e serviços relacionados a jogos.
+* Comprar jogos digitalmente.
+* Ter uma experiência de compra simplificada e segura.
+* Ter acesso mais fácil a jogos de qualidade, com preços competitivos e uma interface amigável.
 
 ---
 
 ## 👥 Público-Alvo
 
-* Pessoas interessadas em melhorar sua qualidade de vida por meio do monitoramento de hábitos diários.
-* Estudantes, trabalhadores e qualquer pessoa que deseje acompanhar sua rotina de forma simples e digital.
-* Profissionais da saúde que desejam utilizar o sistema como apoio em acompanhamentos clínicos.
+* Pessoas interessadas em jogos online.
+* Estudantes, trabalhadores e qualquer pessoa que deseje jogar e interagir com mundo dos gamers de forma simples e digital.
+* Jogadores entusiastas que buscam uma plataforma confiável para adquirir jogos e interagir com outros jogadores.
 
 # ⚙️Levantamento do Bancos de Dados
 
@@ -258,9 +259,34 @@ vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
 
 # 📄 ESTRUTURA DO NOSSO SITE
 
+## WIREFRAMES
+### Wireframes das principais páginas do site, mostrando a estrutura e o layout planejados para cada seção.
+
+#### 1. Página Inicial do Site / 2.Plataforma do Jogo / 3.Informações do Jogo.
+<tr>
+    <td>1
+        <img src="PRINT_IMG/PAGINA INICIAL DO SITE.png" alt="Wireframe da Página Inicial" width="220px">
+    </td>
+    <td>2
+        <img src="PRINT_IMG/PLATAFORMA DO JOGO.png" alt="Wireframe da Página Inicial" width="200px">
+    </td>
+    <td>3
+        <img src="PRINT_IMG/informacao_jogo.png" alt="Wireframe da Página Inicial" width="200px">
+    </td>
+</tr>
+
+#### 4 Página de Login do Site;
+
+<img src="PRINT_IMG/login.png" alt="Wireframe da Página Inicial" width="300px">
+
+#### 5 Página de Compra do Jogo.
+
+<img src="PRINT_IMG/compra.png" alt="Wireframe da Página Inicial" width="300px">
+
+#
 * Link do site: https://medieval-gaming.netlify.app/
 
-```
+
 * Link do repositório:
 ### Telas Iniciais e Navegação
 
