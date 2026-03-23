@@ -11,20 +11,16 @@ CREATE TABLE CLIENTES (
     USUARIO VARCHAR(70) NOT NULL,
     SENHA VARCHAR(255) NOT NULL UNIQUE KEY
 );
-/*
-ATUALIZAÇÃO(05/03/2026): Tabela de produtos
-- alterado o tipo da coluna descricao de: varchar(255) -> text.
-- adicionado 'NOT NULL' nas seguintes colunas: tamanho, descricao, classificacao_indicativa. 
-*/
+
 -- Tabela PRODUTOS
 CREATE TABLE PRODUTOS (
     ID_PRODUTOS INT AUTO_INCREMENT PRIMARY KEY,
+    PLATAFORMA VARCHAR(30) NOT NULL,
     NOME_DO_JOGO VARCHAR(200),
     CATEGORIA VARCHAR(200) NOT NULL,
     CLASSIFICACAO_INDICATIVA VARCHAR(30) NOT NULL,
     PRECO DECIMAL(5,2) NOT NULL,
-    TAMANHO VARCHAR(200) NOT NULL,
-    DESCRICAO TEXT not null,
+    DESCRICAO TEXT NOT NULL,
     FOTO_CAPA TEXT NOT NULL,
     FOTO1 TEXT NOT NULL,
     FOTO2 TEXT NOT NULL,
@@ -33,50 +29,35 @@ CREATE TABLE PRODUTOS (
     FOTO5 TEXT NOT NULL,
     FOTO6 TEXT NOT NULL,
     FOTO7 TEXT NOT NULL,
-    VIDEO TEXT
+    VIDEO TEXT 
 );
 
-/*
-ATUALIZAÇÃO(03/05/2026): Tabela de vendas
-	removidos os itens da tabela: id_clientes, id_produtos, quantidade, preco_unitario, 
-*/
+
 -- Tabela VENDAS
 CREATE TABLE VENDAS (
     ID_VENDAS INT AUTO_INCREMENT PRIMARY KEY,
+    ID_CLIENTES INT NOT NULL,
     DATAS DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     STATUS_PAGAMENTO ENUM('PAGO','PENDENTE','CANCELADO','EM PROCESSAMENTO'),
-    METODO_PAGAMENTO ENUM('CRÉDITO','PIX'),
     TOTAL DECIMAL(10,2) NOT NULL
-    -- FOREIGN KEY (ID_CLIENTES) REFERENCES CLIENTES(ID_CLIENTES),
-    -- FOREIGN KEY (ID_PRODUTOS) REFERENCES PRODUTOS(ID_PRODUTOS)
-	-- HORA TIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-    -- QUANTIDADE INT NOT NULL,
-    -- ID_CLIENTES INT NOT NULL,
-	-- ID_PRODUTOS INT NOT NULL,
 );
 
-/*
-ATUALIZAÇÃO(03/05/2026): Adicionar uma nova tabela chamada de 'vendas_detalhes'
-	Itens da tabela: id_vendas_detalhes, id_vendas, id_clientes, id_produtos, quantidade, preco_unitario, 
-*/
-CREATE TABLE ITENS_VENDAS(
-	id_vendas_detalhes INT AUTO_INCREMENT PRIMARY KEY, 
-	quantidade INT NOT NULL, 
-	preco_unitario DECIMAL NOT NULL,
+-- Tabela ITENS_VENADS
+CREATE TABLE ITENS_VENDAS_DETALHES(
+	ID_VENDAS_DETALHES INT AUTO_INCREMENT PRIMARY KEY, 
+	QUANTIDADE INT NOT NULL, 
+	PRECO_UNITARIO DECIMAL NOT NULL,
 	TOTAL DECIMAL(10,2) NOT NULL,
     ID_VENDAS INT NOT NULL,
     ID_CLIENTES INT NOT NULL,
     ID_PRODUTOS INT NOT NULL
--- FOREIGN KEY (ID_VENDAS) REFERENCES VENDAS(ID_VENDAS), 
--- foreign key (id_clientes) REFERENCES CLIENTES(ID_CLIENTES), 
--- foreign key (id_produtos) references PRODUTOS(ID_PRODUOS) 
 );
-
 
 -- Tabela ESTOQUES
 CREATE TABLE ESTOQUES (
     ID_ESTOQUES INT AUTO_INCREMENT PRIMARY KEY,
     ID_PRODUTOS INT NOT NULL,
+    CHAVE_PRODUTO VARCHAR(30) NOT NULL,
     QUANTIDADE INT NOT NULL,
     DATA_ENTRADA DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (ID_PRODUTOS) REFERENCES PRODUTOS(ID_PRODUTOS)
@@ -87,6 +68,7 @@ CREATE TABLE EXTRAS (
     ID_EXTRAS INT AUTO_INCREMENT PRIMARY KEY,
     NOME_DO_EXTRA VARCHAR(200),
     ID_PRODUTOS INT NOT NULL,
+    CHAVE_EXTRA VARCHAR(30),
     FOREIGN KEY (ID_PRODUTOS) REFERENCES PRODUTOS(ID_PRODUTOS)
 );
 
@@ -101,11 +83,65 @@ CREATE TABLE REQUISITOS (
     ARMAZENAMENTO VARCHAR(50),
     VERSAO_DIRECTX VARCHAR(30),
     CONEXAO_INTERNET ENUM('SIM','NÃO'),
-    OUTROS VARCHAR(255),
-    FOREIGN KEY (ID_PRODUTOS) REFERENCES PRODUTOS(ID_PRODUTOS)
+    OUTROS TEXT
 );
-ALTER TABLE `dbVendasJogos`.`itens_vendas` 
+
+-- ////////////////////////////////
+-- ////////////////////////////////
+ALTER TABLE `VendasJogos`.`itens_vendas` 
 ADD CONSTRAINT `fk_itens_vendas_pk_vendas`
   FOREIGN KEY (`id_vendas`)
-  REFERENCES `dbVendasJogos`.`vendas` (`id_vendas`)
+  REFERENCES `VendasJogos`.`vendas` (`id_vendas`);
+
+-- =================
+-- =================
   
+ALTER TABLE `VendasJogos`.`itens_vendas` 
+ADD CONSTRAINT `fk_itens_vendas_pk_produtos`
+  FOREIGN KEY (`id_produtos`)
+  REFERENCES `VendasJogos`.`produtos` (`id_produtos`);
+
+-- =================
+-- =================
+
+ALTER TABLE `VendasJogos`.`itens_vendas` 
+ADD CONSTRAINT `fk_itens_vendas_pk_clientes`
+  FOREIGN KEY (`id_clientes`)
+  REFERENCES `VendasJogos`.`clientes` (`id_clientes`);
+
+-- =================
+-- ///////////////////////
+-- =================
+
+ALTER TABLE `VendasJogos`.`extras` 
+ADD CONSTRAINT `fk_extras_pk_produtos`
+  FOREIGN KEY (`id_produtos`)
+  REFERENCES `VendasJogos`.`produtos` (`id_produtos`);
+
+-- =================
+-- //////////////////////
+-- =================
+
+ALTER TABLE `VendasJogos`.`estoques` 
+ADD CONSTRAINT `fk_estoques_pk_produtos`
+  FOREIGN KEY (`id_produtos`)
+  REFERENCES `VendasJogos`.`produtos` (`id_produtos`);
+
+-- =================
+-- ////////////////////
+-- =================
+
+ALTER TABLE `VendasJogos`.`requisitos` 
+ADD CONSTRAINT `fk_requisitos_pk_produtos`
+  FOREIGN KEY (`id_produtos`)
+  REFERENCES `VendasJogos`.`produtos` (`id_produtos`);
+
+
+-- =================
+-- ///////////////////
+-- =================
+
+ALTER TABLE `VendasJogos`.`vendas` 
+ADD CONSTRAINT `fk_vendas_pk_clientes`
+  FOREIGN KEY (`id_clientes`)
+  REFERENCES `VendasJogos`.`clientes` (`id_clientes`);
