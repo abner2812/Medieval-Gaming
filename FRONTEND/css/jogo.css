@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================ estilizando a busca =========================================== */
+#busca{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url("../img/cab1.png");
+    background-size: 100%; 
+}
+
+#busca #logo img{
+    width: 350px;
+    height: 100px;
+}
+
+#busca #pesquisa form{
+    border: 1px solid rgb(100, 73, 0);
+    padding: 10px;
+    width: 800px;
+    border-radius: 30px;
+    background-color: rgb(252, 252, 252);
+}
+
+#busca #pesquisa input{
+    width: 90%;
+    padding: 5px;
+    border: 0;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+}
+
+#busca #pesquisa button{
+    width: 8%;
+    border: 0;
+    background-color: white;
+}
+
+#busca #pesquisa img{
+    width: 40px;
+    height: 40px;
+}
+
+#busca #usuario-compra{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#busca #usuario-compra a{
+    text-align: center;
+    padding: 0 35px;
+    text-decoration: none;
+    font-size: 10pt;
+    color: rgb(2, 26, 48);
+    margin-left: 2px;
+}
+/* ======================================= ESTILIZAÇÃO DOS BOTÕES DE =================================================== */
+
+#categorias {  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.frutiger-button {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  border: 0;
+  text-shadow: 1px 1px #000a;
+  background: linear-gradient(#006caa, #00c3ff);
+  box-shadow: 0px 4px 6px 0px #0008;
+  transition: 0.3s all;
+}
+
+.frutiger-button:hover {
+  box-shadow: 0px 6px 12px 0px #0009;
+}
+
+.frutiger-button:active {
+  box-shadow: 0px 0px 0px 0px #0000;
+}
+
+.inner {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 4px;
+  background: radial-gradient(circle at 50% 100%, #30f8f8 10%, #30f8f800 55%),
+    linear-gradient(#00526a, #009dcd);
+  overflow: hidden;
+  transition: inherit;
+}
+
+.inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-65deg, #0000 40%, #fff7 50%, #0000 70%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: thing 3s ease infinite;
+}
+
+@keyframes thing {
+  0% {
+    background-position: 130%;
+    opacity: 1;
+  }
+
+  to {
+    background-position: -166%;
+    opacity: 0;
+  }
+}
+
+.top-white {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0 -8em;
+  background: radial-gradient(
+    circle at 50% -270%,
+    #fff 45%,
+    #fff6 60%,
+    #fff0 60%
+  );
+  transition: inherit;
+}
+
+.inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transition: inherit;
+  box-shadow: inset 0px 2px 8px -2px #0000;
+}
+
+.frutiger-button:active .inner::after {
+  box-shadow: inset 0px 2px 8px -2px #000a;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-weight: 550;
+  transition: inherit;
+}
+/* ================================= ESTILIZANDO carrossel ================================== */
+
+
+
+
+/* ================================= ESTILIZANDO O RODAPÉ ================================== */
+
+footer{
+    background-color: rgb(23, 156, 165);
+}
+footer section{
+    border: 2px solid blue;
+    margin: 5px;
+    display: flex;
+}
+
+footer section div{
+    flex:1;
+    height: 300px;
+    border: 2px solid yellow;
+    margin: 5px;
+    padding-top: 20px;
+}
+
+footer section div .logo img{
+    width: 200px;
+    height: 120;  
+}
+
+footer section div .redes img{
+    width: 50px;
+    height: 50px;
+}
+footer section #logo-redes{
+    display: flex;
+    flex-direction: column;
+}
+
+
+

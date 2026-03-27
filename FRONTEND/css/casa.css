@@ -17,7 +17,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background: url(imagens/cab1.png) no-repeat center center;
+    background: #00526a;
     background-size: cover;
     position: fixed;
     margin-bottom: 200px;
