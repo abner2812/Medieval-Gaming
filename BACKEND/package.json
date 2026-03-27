@@ -16,7 +16,7 @@
   "license": "ISC",
   "author": "Pedro Bezrra da Silva, Abner Nunis, Eduardo Modé, Vitor",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
