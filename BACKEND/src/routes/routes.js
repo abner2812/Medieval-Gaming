@@ -53,5 +53,7 @@ router.post("/itens_vendas/cadastrar", (req, res) => {
     res.send({ msg: rs});
 })
 
+// ====================  LISTAR AS INFORMAÇÕES =====================
+
 module.exports = router
  
