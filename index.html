@@ -11,54 +11,63 @@
 </head>
 <body>
     <!-- barra no topo da pagina, versão da página inicial -->
-    <header id="inicio"width="100px;" height="100px;">
-
-        <div id="logo"><img src="" alt="logo da Medieval Gaming"></div>
-        <div id="pc"><input type="checkbox" value="PC"></div>
-        <div id="playstation"><input type="checkbox" value="playstation"></div>
-        <div id="xbox"><input type="checkbox" value="xbox"></div>
-        <div id="nintendo-switch"><input type="checkbox" value="nintendo-switch"></div>
-        <div id="barra-pesquisa">
-            <!-- AQUI VAI UMA BARRA DE PESQUISA
-            A FORMATACAO VAI SER UMA BORDA FINA, COM O BACKGROUND FEITO EM UMA UM POUCO MAIS CLARA DO QUE A COR
-            AO REDOR DA BARRA DA PESQUISA,-->
-            <input type="text" id="barra-pesquisa2">
+    <header id="inicio"width="100px;" height="auto;">
+    
+        <div id="logo"><img src="icone/logo.png" alt="logo da Medieval Gaming"></div>
+        <nav>
+            <div id="categorias" class="frutiger-container">
+                
+                <button class="frutiger-button">
+                    <div class="inner">
+                        <div class="top-white"></div>
+                        <span class="text">PC</span>
+                    </div>
+                </button>
+                <button class="frutiger-button">
+                    <div class="inner">
+                        <div class="top-white"></div>
+                        <span class="text">Xbox</span>
+                    </div>
+                </button>
+                <button class="frutiger-button">
+                    <div class="inner">
+                        <div class="top-white"></div>
+                        <span class="text">Nintendo Switch</span>
+                    </div>
+                </button>
+                <button class="frutiger-button">
+                    <div class="inner">
+                        <div class="top-white"></div>
+                        <span class="text">playstation</span>
+                    </div>
+                </button>
+            </div>
+        </nav>
+    
+<!-- AQUI VAI UMA BARRA DE PESQUISA A FORMATACAO VAI SER UMA BORDA FINA, COM O BACKGROUND FEITO EM UMA UM POUCO MAIS CLARA DO QUE A COR AO REDOR DA BARRA DA PESQUISA,-->
+        
+            <!-- BARRA DE PESQUISA -->
+        <div class="height">
+            <label for="Height">pesquisar<sup></sup></label>
+            <input id="Height" type="text" autocomplete="off" name="text" class="input" />
+        
+            <!-- BOTÃO DA LUPA  -->
+        <div id="botao-pesquisa"><img src="icone/lupa.png" alt="botão de pesquisa"></div>
+        
         </div>
             <!-- AQUI VAI UM BOTAO DE PESQUISA, COM O ICONE DE LUPA, O BOTAO VAI SER DO MESMO TAMANHO DA BARRA DE PESQUISA, E VAI FICAR AO LADO DIREITO DELA -->
-        <div id="botao-pesquisa"><img src="icone/lupa.png" alt="botão de pesquisa"></div>
-        <div id="carrinho"><img src="icone/carrinho.png" alt="carrinho de compras"></div>
-        <div id="login"><img src="icone/login.png" alt="login"></div>
-        <div id="contato"><img src="icone/contato.png" alt="contato"></div>
-        <div id="configuracoes"><img src="icone/configuracoes.png" alt="configurações"></div>
-        <div id="sair"><img src="icone/sair.png" alt="sair"></div>
+        <div id="carrinho">
+            <img src="icone/icone2.png" style="width: 100%; height: auto;" alt="carrinho de compras">
+            <h3> CARRINHO DE COMPRAS</h3>
+        </div>
+        <div id="login">
+            <img src="icone/icone3.png" style="width: 100%; height: auto;" alt="login">
+            <h3>CADASTRE-SE AQUI</h3>
+        </div>
     </header>
     <!-- barra de categorias, versão da página inicial -->
-        <div id="categorias" class="frutiger-container">
-            <button class="frutiger-button">
-            <div class="inner">
-                <div class="top-white"></div>
-                <span class="text">PC</span>
-            </div>
-            </button>
-            <button class="frutiger-button">
-            <div class="inner">
-                <div class="top-white"></div>
-                <span class="text">Xbox</span>
-            </div>
-            </button>
-            <button class="frutiger-button">
-            <div class="inner">
-                <div class="top-white"></div>
-                <span class="text">Nintendo Switch</span>
-            </div>
-            </button>
-            <button class="frutiger-button">
-            <div class="inner">
-                <div class="top-white"></div>
-                <span class="text">playstation</span>
-            </div>
-            </button>
-        </div>    
+    <nav>
+    </nav>      
         <!-- From Uiverse.io by SelfMadeSystem --> 
 
 
@@ -71,6 +80,7 @@
         
         
     <main>
+        <div class="container"></div>
         <div id="destaque">
             <link rel="stylesheet" href="">
         </div>
@@ -81,14 +91,14 @@
         <!-- POSIÇÃO DOS CARTÕES-->
             <div class="container" id="conteudo">
                 <div class="card" data-tipo="artigos">
-                    <img src="https://via.placeholder.com/300x150" alt="Imagem">
+                    <img src="imagens/card1.jpg" alt="Imagem">
                     <div class="content">
                     <h3>Título do Artigo</h3>
                     <p>Descrição breve do conteúdo...</p>
                 </div>
             </div>
                 <div class="card" data-tipo="videos">
-                    <img src="https://via.placeholder.com/300x150" alt="Imagem">
+                    <img src="imagens/card1.jpg" alt="Imagem">
                     <div class="content">
                     <h3>Vídeo Interessante</h3>
                     <p>Resumo do vídeo...</p>
@@ -102,14 +112,14 @@
         <!-- Cards de conteúdo -->
             <div class="container" id="conteudo">
                 <div class="card" data-tipo="artigos">
-                    <img src="https://via.placeholder.com/300x150" alt="Imagem">
+                    <img src="imagens/card1.jpg" alt="Imagem">
                     <div class="content">
                         <h3>Título do Artigo</h3>
                         <p>Descrição breve do conteúdo...</p>
                 </div>
             </div>
             <div class="card" data-tipo="videos">
-                    <img src="https://via.placeholder.com/300x150" alt="Imagem">
+                    <img src="imagens/card1.jpg" alt="Imagem">
                         <div class="content">
                         <h3>Vídeo Interessante</h3>
                         <p>Resumo do vídeo...</p>
@@ -123,14 +133,14 @@
             <!-- Cards de conteúdo -->
                 <div class="container" id="conteudo">
                 <div class="card" data-tipo="artigos">
-                    <img src="https://via.placeholder.com/300x150" alt="Imagem">
+                    <img src="imagens/card1.jpg" alt="Imagem">
                 <div class="content">
                     <h3>Título do Artigo</h3>
                     <p>Descrição breve do conteúdo...</p>
                 </div>
             </div>
                 <div class="card" data-tipo="videos">
-                <img src="https://via.placeholder.com/300x150" alt="Imagem">
+                <img src="imagens/card1.jpg" alt="Imagem">
                     <div class="content">
                         <h3>Vídeo Interessante</h3>
                         <p>Resumo do vídeo...</p>
