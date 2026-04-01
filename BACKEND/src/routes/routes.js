@@ -53,7 +53,53 @@ router.post("/itens_vendas/cadastrar", (req, res) => {
     res.send({ msg: rs});
 })
 
-// ====================  LISTAR AS INFORMAÇÕES =====================
+// ====================  LISTAR AS INFORMAÇÕES ===================== //
+
+// Rota para listar as [BLANK(TO BE REPLACED)] cadastradas
+router.get("/clientes/listar",async(req,res)=>{
+    let rs = await cli_controller.listarClientes()
+    res.send({msg:rs})
+})
+
+// Rota para listar as [BLANK(TO BE REPLACED)] cadastradas
+router.get("/produtos/listar",async(req,res)=>{
+    let rs = await prod_controller.listarProdutos()
+    res.send({msg:rs})
+})
+
+// Rota para listar as [BLANK(TO BE REPLACED)] cadastradas
+router.get("/estoques/listar",async(req,res)=>{
+    let rs = await estq_controller.listarEstoques()
+    res.send({msg:rs})
+})
+
+// Rota para listar as [BLANK(TO BE REPLACED)] cadastradas
+router.get("/extras/listar",async(req,res)=>{
+    let rs = await extra_controller.listarExtras()
+    res.send({msg:rs})
+})
+
+// Rota para listar as [BLANK(TO BE REPLACED)] cadastradas
+router.get("/requisitos/listar",async(req,res)=>{
+    let rs = await reqs_controller.listarRequitos()
+    res.send({msg:rs})
+})
+
+// Rota para listar as [BLANK(TO BE REPLACED)] cadastradas
+router.get("/vendas/listar",async(req,res)=>{
+    let rs = await vend_controller.listarVendas()
+    res.send({msg:rs})
+})
+
+// Rota para listar as [BLANK(TO BE REPLACED)] cadastradas
+router.get("/itens_vendas/listar",async(req,res)=>{
+    let rs = await iten_vend_controller.listarItensVendas()
+    res.send({msg:rs})
+})
+
+
+// ====================  PESQUISAR INFORMAÇÕES ESPECIFICAS ===================== //
+
 
 module.exports = router
  

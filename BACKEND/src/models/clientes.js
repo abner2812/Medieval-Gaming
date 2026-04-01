@@ -21,16 +21,22 @@ const con = require("../database/conexao.js")
     })
 }
 
-// function listar(){
-//     con.query(`SELECT * FROM produto`,(erro,resultado)=>{
-//         if (erro){
-//             return `Erro ao tentar listar as produtos`
-//         }
-//         else{
-//             return resultado
-//         }
-//     })
-// }
+function listar(){
+   return new Promise((resolve,reject)=>{
+       
+       con.query(`SELECT * FROM clientes ORDER BY nome`,(erro,resultado)=>{
+           if (erro){
+            console.error(erro)
+            reject( `Erro ao tentar listar os clientes`)
+        }
+        else{
+            console.log(resultado)
+            resolve (resultado)
+        }
+    }) 
+    })
+}
+
 
 //  function pesquisarProduto(nome_produto){
 //     con.query(`SELECT * FROM produto WHERE nome_produto = ?`,nome_produto,(erro,resultado)=>{
@@ -50,7 +56,8 @@ const con = require("../database/conexao.js")
 // }
 
 module.exports={
-    cadastrar
+    cadastrar,
+    listar
 }
 /*
 TESTE DO THUNDER:
