@@ -1,5 +1,6 @@
 // Importar o módulo de conexão com o banco de dados 
 const con = require("../database/conexao.js")
+// const { listar } = require("./clientes.js")
 
  function cadastrar(id_produtos, chave_produto, quantidade){
     con.query(`INSERT INTO estoques SET ? `,
@@ -19,8 +20,25 @@ const con = require("../database/conexao.js")
     })
 }
 
+function listar(){
+   return new Promise((resolve,reject)=>{
+       
+       con.query(`SELECT * FROM estoques ORDER BY quantidade`,(erro,resultado)=>{
+           if (erro){
+            console.error(erro)
+            reject( `Erro ao tentar listar os estoques`)
+        }
+        else{
+            console.log(resultado)
+            resolve (resultado)
+        }
+    }) 
+    })
+}
+
 module.exports={
-    cadastrar
+    cadastrar,
+    listar
 }
 
 /*

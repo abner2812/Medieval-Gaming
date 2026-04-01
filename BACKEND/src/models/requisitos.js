@@ -24,8 +24,25 @@ const con = require("../database/conexao.js")
     })
 }
 
+function listar(){
+   return new Promise((resolve,reject)=>{
+       
+       con.query(`SELECT * FROM requisitos ORDER BY id_produtos`,(erro,resultado)=>{
+           if (erro){
+            console.error(erro)
+            reject( `Erro ao tentar listar os extras`)
+        }
+        else{
+            console.log(resultado)
+            resolve (resultado)
+        }
+    }) 
+    })
+}
+
 module.exports={
-    cadastrar
+    cadastrar,
+    listar
 }
  /*
 TESTE DO THUNDER

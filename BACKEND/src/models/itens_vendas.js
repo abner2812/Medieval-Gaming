@@ -21,8 +21,25 @@ const con = require("../database/conexao.js")
     })
 }
 
+function listar(){
+   return new Promise((resolve,reject)=>{
+       
+       con.query(`SELECT * FROM itens_vendas ORDER BY id_clientes`,(erro,resultado)=>{
+           if (erro){
+            console.error(erro)
+            reject( `Erro ao tentar listar itens_vendas`)
+        }
+        else{
+            console.log(resultado)
+            resolve (resultado)
+        }
+    }) 
+    })
+}
+
 module.exports={
-    cadastrar
+    cadastrar,
+    listar
 }
 
 /*

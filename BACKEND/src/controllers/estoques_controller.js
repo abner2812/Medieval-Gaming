@@ -4,5 +4,12 @@ const cad = require("../models/estoques.js")
     // Estamos cadasatrando o produto 
     return cad.cadastrar(id_produtos, chave_produto, quantidade)
 }
-module.exports=cadastrarEstoques
 
+ async function listarEstoques(estoques){
+     return await cad.listar()
+ }
+
+module.exports={
+    cadastrarEstoques,
+    listarEstoques,
+}
