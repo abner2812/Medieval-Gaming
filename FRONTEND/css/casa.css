@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@
 }
 /* ==================== CORPO DO SITE ========================= */
 body {
-    background-color: #36444b;
+    background-color: #1e2c33;
     color: #ffffff;
     font-family: 'Arial', sans-serif;
 }
