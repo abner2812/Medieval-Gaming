@@ -1,72 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* ==================== CORPO DO SITE ========================= */
+body {
+    background-color: #009fee;
+    color: #e70101;
+    font-family: 'Arial', sans-serif;
+}
+
+/* header {
+    display: flex;
+    height: 280px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #00526a;
+    background-size: cover;
+    position: fixed;
+    margin-bottom: 200px;
+    width: 100%;
+    top: 0px;
+    z-index: 10000;
+  } */
 
 /* ============================ estilizando a busca =========================================== */
-#busca{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-image: url("../img/cab1.png");
-    background-size: 100%; 
+#busca {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url("../img/cab1.png");
+  background-size: 100%;
+  height:300px;
 }
 
-#busca #logo img{
-    width: 350px;
-    height: 100px;
+#busca #logo img {
+  width: 350px;
+  height: 100px;
 }
 
-#busca #pesquisa form{
-    border: 1px solid rgb(100, 73, 0);
-    padding: 10px;
-    width: 800px;
-    border-radius: 30px;
-    background-color: rgb(252, 252, 252);
+#busca #pesquisa form {
+  border: 1px solid rgb(100, 73, 0);
+  padding: 10px;
+  width: 800px;
+  border-radius: 30px;
+  background-color: rgb(252, 252, 252);
 }
 
-#busca #pesquisa input{
-    width: 90%;
-    padding: 5px;
-    border: 0;
-    background-color: rgb(255, 255, 255);
-    outline: none;
+#busca #pesquisa input {
+  width: 90%;
+  padding: 5px;
+  border: 0;
+  background-color: rgb(255, 255, 255);
+  outline: none;
 }
 
-#busca #pesquisa button{
-    width: 8%;
-    border: 0;
-    background-color: white;
+#busca #pesquisa button {
+  width: 8%;
+  border: 0;
+  background-color: white;
 }
 
-#busca #pesquisa img{
-    width: 40px;
-    height: 40px;
+#busca #pesquisa img {
+  width: 40px;
+  height: 40px;
 }
 
-#busca #usuario-compra{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+#busca #usuario-compra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#busca #usuario-compra a{
-    text-align: center;
-    padding: 0 35px;
-    text-decoration: none;
-    font-size: 10pt;
-    color: rgb(2, 26, 48);
-    margin-left: 2px;
+#busca #usuario-compra a {
+  text-align: center;
+  padding: 0 35px;
+  text-decoration: none;
+  font-size: 10pt;
+  color: rgb(2, 26, 48);
+  margin-left: 2px;
 }
+
 /* ======================================= ESTILIZAÇÃO DOS BOTÕES DE =================================================== */
 
-#categorias {  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    
+#categorias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
 }
 
 .frutiger-button {
@@ -126,12 +150,10 @@
   position: absolute;
   border-radius: inherit;
   inset: 0 -8em;
-  background: radial-gradient(
-    circle at 50% -270%,
-    #fff 45%,
-    #fff6 60%,
-    #fff0 60%
-  );
+  background: radial-gradient(circle at 50% -270%,
+      #fff 45%,
+      #fff6 60%,
+      #fff0 60%);
   transition: inherit;
 }
 
@@ -155,43 +177,103 @@
   font-weight: 550;
   transition: inherit;
 }
+
 /* ================================= ESTILIZANDO carrossel ================================== */
 
+/* ================================= ESTILIZANDO CAMPO CARD ================================== */
 
+/* main{
+  display: flex;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+} */
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px;
+
+
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  display: flex;
+  place-items: center;
+  align-items: center;
+
+
+
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card .content {
+  padding: 15px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+}
+
+h1 {
+  text-align: center;
+}
 
 
 /* ================================= ESTILIZANDO O RODAPÉ ================================== */
 
-footer{
-    background-color: rgb(23, 156, 165);
-}
-footer section{
-    border: 2px solid blue;
-    margin: 5px;
-    display: flex;
+footer {
+  background-color: rgb(23, 156, 165);
 }
 
-footer section div{
-    flex:1;
-    height: 300px;
-    border: 2px solid yellow;
-    margin: 5px;
-    padding-top: 20px;
+footer section {
+  border: 2px solid blue;
+  margin: 5px;
+  display: flex;
 }
 
-footer section div .logo img{
-    width: 200px;
-    height: 120;  
+footer section div {
+  flex: 1;
+  height: 300px;
+  border: 2px solid yellow;
+  margin: 5px;
+  padding-top: 20px;
 }
 
-footer section div .redes img{
-    width: 50px;
-    height: 50px;
-}
-footer section #logo-redes{
-    display: flex;
-    flex-direction: column;
+footer section div .logo img {
+  width: 200px;
+  height: 120;
 }
 
+footer section div .redes img {
+  width: 50px;
+  height: 50px;
+}
 
-
+footer section #logo-redes {
+  display: flex;
+  flex-direction: column;
+}
