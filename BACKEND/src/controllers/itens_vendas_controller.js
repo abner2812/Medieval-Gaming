@@ -9,7 +9,12 @@ async function listarItensVendas(vendas){
     return await cad.listar()
 }
 
+async function pesquisarItensVendas(id_vendas){
+    return await cad.pesquisar(id_vendas)
+}
+
 module.exports={
     cadastrarItensVendas,
     listarItensVendas,
+    pesquisarItensVendas
 }

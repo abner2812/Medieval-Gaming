@@ -100,6 +100,47 @@ router.get("/itens_vendas/listar",async(req,res)=>{
 
 // ====================  PESQUISAR INFORMAÇÕES ESPECIFICAS ===================== //
 
+router.get("/clientes/pesquisar",async(req,res)=>{
+    // console.log(req.body.nome)
+    let resul = await cli_controller.pesquisarClientes(req.body.nome)
+    res.send({msg:resul})
+})
+// -- Produtos:
+router.get("/produtos/pesquisar",async(req,res)=>{
+    console.log(req.body.nome_do_jogo)
+    let resul = await prod_controller.pesquisarProdutos(req.body.nome_do_jogo)
+    res.send({msg:resul})
+})
+
+// router.get("/produtos/pesquisarPlataforma",async(req,res)=>{
+//     console.log(req.body.nome_do_jogo)
+//     let resul = await prod_controller.pesquisarProdutos(req.body.nome_do_jogo)
+//     res.send({msg:resul})
+// })
+
+// -- Extras:
+router.get("/extras/pesquisar",async(req,res)=>{
+    console.log(req.body.nome_do_extra)
+    let resul = await extra_controller.pesquisaExtras(req.body.nome_do_extra)
+    res.send({msg:resul})
+})
+
+router.get("/vendas/pesquisar",async(req,res)=>{
+    console.log(req.body.id_clientes)
+    let resul = await vend_controller.pesquisaVendas(req.body.id_clientes)
+    res.send({msg:resul})
+})
+
+router.get("/itensvendas/pesquisar",async(req,res)=>{
+    console.log(req.body.id_vendas)
+    let resul = await iten_vend_controller.pesquisarItensVendas(req.body.id_vendas)
+    res.send({msg:resul})
+})
+
+router.get("/estoques/pesquisar",async(req,res)=>{console.log(req.body.id_produtos);let resul = await estq_controller.pesquisarEstoques(req.body.id_produtos);res.send({msg:resul})
+})
+
+router.get("/requisistos/pesquisar",async(req,res)=>{console.log(req.body.id_produtos);let resul = await reqs_controller.pesquisarRequisitos(req.body.id_produtos);res.send({msg:resul})})
 
 module.exports = router
  

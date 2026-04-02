@@ -9,7 +9,12 @@ async function listarVendas(vendas){
     return await cad.listar()
 }
 
+async function pesquisaVendas(id_clientes) {
+    return await cad.pesquisar(id_clientes)
+}
+
 module.exports={
     cadastrarVendas,
-    listarVendas
+    listarVendas,
+    pesquisaVendas
 }

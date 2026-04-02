@@ -34,9 +34,25 @@ function listar(){
     })
 }
 
+ function pesquisar(id_clientes){
+    return new Promise((resolve,reject)=>{
+        con.query(`SELECT * FROM vendas WHERE id_clientes = ? `,id_clientes,(erro,resultado)=>{
+            if (erro){
+                console.error(erro)
+                reject(`Erro ao tentar listar as produto`)
+            }
+            else{
+                console.log(resultado)
+                resolve(resultado)
+            }
+    })
+    })
+}
+
 module.exports={
     cadastrar,
-    listar
+    listar,
+    pesquisar
 }
 
 /*

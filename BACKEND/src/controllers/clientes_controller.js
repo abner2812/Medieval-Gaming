@@ -6,9 +6,14 @@ const cad = require("../models/clientes.js")
 }
  async function listarClientes(clientes){
      return await cad.listar()
- }
+}
+
+async function pesquisarClientes(nome){
+    return await cad.pesquisar(nome)
+}
 
 module.exports= {
     cadastrarClientes,
-    listarClientes
+    listarClientes,
+    pesquisarClientes
 }

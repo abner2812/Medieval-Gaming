@@ -38,26 +38,26 @@ function listar(){
 }
 
 
-//  function pesquisarProduto(nome_produto){
-//     con.query(`SELECT * FROM produto WHERE nome_produto = ?`,nome_produto,(erro,resultado)=>{
-//         if (erro){
-//             return `Erro ao tentar listar as produto`
-//         }
-//         else{
-//             return resultado
-//         }
-//     })
-// }
+ function pesquisar(nome){
+    return new Promise((resolve,reject)=>{
+        con.query(`SELECT * FROM clientes WHERE nome = ?`,nome,(erro,resultado)=>{
+            if (erro){
+                console.error(erro)
+                reject(`Erro ao tentar listar as produto`)
+            }
+            else{
+                console.log(resultado)
+                resolve(resultado)
+            }
+    })
+    })
+}
 
-// module.exports={
-//     cadastrar,
-//     listar,
-//     pesquisarProduto
-// }
 
 module.exports={
     cadastrar,
-    listar
+    listar,
+    pesquisar
 }
 /*
 TESTE DO THUNDER:

@@ -40,9 +40,25 @@ function listar(){
     })
 }
 
+function pesquisar(id_produtos){
+    return new Promise((resolve,reject)=>{
+        con.query(`SELECT * FROM requisitos WHERE id_produtos = ?`,id_produtos,(erro,resultado)=>{
+            if(erro){
+                console.error(erro);
+                reject(`Falha ao tentar puxar os requisito deste produto`)
+            }
+            else{
+                console.log(resultado);
+                resolve(resultado)
+            }
+    })
+})
+}
+
 module.exports={
     cadastrar,
-    listar
+    listar,
+    pesquisar
 }
  /*
 TESTE DO THUNDER

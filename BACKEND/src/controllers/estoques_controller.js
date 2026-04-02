@@ -9,7 +9,12 @@ const cad = require("../models/estoques.js")
      return await cad.listar()
  }
 
+async function pesquisarEstoques(id_produtos){
+    return await cad.pesquisar(id_produtos)
+}
+
 module.exports={
     cadastrarEstoques,
     listarEstoques,
+    pesquisarEstoques
 }

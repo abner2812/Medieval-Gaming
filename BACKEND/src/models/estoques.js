@@ -36,9 +36,19 @@ function listar(){
     })
 }
 
+function pesquisar(id_produtos){
+    return new Promise((resolve,reject)=>{
+    con.query(`SELECT * FROM estoques WHERE id_produtos = ?`,id_produtos,(erro,resultado)=>{
+        if(erro){ console.error(erro);reject(`Erro tentar pesquisar as informações de ESTOQUE deste produto`)}
+        else{console.log(resultado);resolve(resultado)}
+    })
+    })
+}
+
 module.exports={
     cadastrar,
-    listar
+    listar,
+    pesquisar
 }
 
 /*

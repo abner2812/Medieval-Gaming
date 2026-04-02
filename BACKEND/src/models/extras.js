@@ -34,9 +34,25 @@ function listar(){
     })
 }
 
+ function pesquisar(nome_do_extra){
+    return new Promise((resolve,reject)=>{
+        con.query(`SELECT * FROM extras WHERE nome_do_extra = ? `,nome_do_extra,(erro,resultado)=>{
+            if (erro){
+                console.error(erro)
+                reject(`Erro ao tentar listar as produto`)
+            }
+            else{
+                console.log(resultado)
+                resolve(resultado)
+            }
+    })
+    })
+}
+
 module.exports={
     cadastrar,
-    listar
+    listar,
+    pesquisar
 }
 
 /*
