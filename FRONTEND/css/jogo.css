@@ -97,12 +97,13 @@ header {
 #categorias {
   
   background-image: url("../img/titulo.png");
-  background-size: 30%;
+  /* background-image: url("../img/bt2.png"); */
+  background-size: 30%; /* Ajusta o tamanho da imagem de fundo */
   background-repeat: no-repeat; /* Evita a repetição */
   background-position: center;  /* Centraliza a imagem */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* display: grid; */ 
+  align-items: center; /* align-items: center; */
+  justify-content: center;/* justify-content: space-around; */
   gap: 20px;
   margin-top: 160px;
   position: fixed;
@@ -112,43 +113,161 @@ header {
   height: 170px;
   width: 1900px;
 }
-
-.frutiger-button {
+/* ============BOTAO DO PC ======== */
+.frutiger-button1 {
   cursor: pointer;
   position: relative;
   padding: 2px;
   border-radius: 6px;
   border: 0;
   text-shadow: 1px 1px #000a;
-  background: linear-gradient(#006caa, #00c3ff);
+  background: linear-gradient(#b6e2fc, #00c3ff);
   box-shadow: 0px 4px 6px 0px #0008;
   transition: 0.3s all;
 }
 
-.frutiger-button:hover {
-  box-shadow: 0px 6px 12px 0px #0009;
+.text1 {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  gap: 10px;
 }
-
-.frutiger-button:active {
-  box-shadow: 0px 0px 0px 0px #0000;
-}
-
-.inner {
+.inner1 {
   position: relative;
   inset: 0px;
   padding: 1em;
   border-radius: 4px;
-  background: radial-gradient(circle at 50% 100%, #30f8f8 10%, #30f8f800 55%),
-    linear-gradient(#00526a, #009dcd);
+  background: radial-gradient(circle at 50% 100%, #ffffff 10%, #30f8f800 55%),
+  linear-gradient(#204f61, #1847a0);
+  overflow: hidden;
+  transition: inherit;
+}
+/* ============BOTAO DO XBOX ======== */
+.frutiger-button2 {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  border: 0;
+  text-shadow: 1px 1px rgba(17, 203, 228, 0.384);
+  background: linear-gradient(#01ff16, #07b354);
+  box-shadow: 0px 4px 6px 0px rgb(24, 90, 4);
+  transition: 0.3s all;
+}
+
+.text2 {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  gap: 10px;
+}
+.inner2 {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 4px;
+  background: radial-gradient(circle at 50% 100%, #ffffff 10%, #30f8f800 55%),
+  linear-gradient(#0f270cf8, #08f57e);
+  overflow: hidden;
+  transition: inherit;
+}
+/* ============BOTAO DO NINTENDO SWITCH ======== */
+.frutiger-button3 {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  border: 0;
+  text-shadow: 1px 1px rgba(17, 203, 228, 0.384);
+  background: linear-gradient(#b30c0c, #ffacaccb);
+  box-shadow: 0px 4px 6px 0px rgba(94, 7, 7, 0.533);
+  transition: 0.3s all;
+}
+
+.text3 {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  gap: 10px;
+}
+.inner3 {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 4px;
+  background: radial-gradient(circle at 50% 100%, #ffe8e8 10%, #30f8f800 55%),
+  linear-gradient(#612020, #fc2121);
   overflow: hidden;
   transition: inherit;
 }
 
-.inner::before {
+/* ============BOTAO DO PLAYSTATION ======== */
+.frutiger-button4 {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  border: 0;
+  text-shadow: 1px 1px rgba(16, 0, 247, 0.384);
+  background: linear-gradient(#274df7, #1100ff);
+  box-shadow: 0px 4px 6px 0px rgba(19, 48, 45, 0.533);
+  transition: 0.3s all;
+}
+
+.text4 {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  gap: 10px;
+}
+.inner4 {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 4px;
+  background: radial-gradient(circle at 50% 100%, #ffffff 10%, #30f8f800 55%),
+  linear-gradient(#030964, #0050fd);
+  overflow: hidden;
+  transition: inherit;
+}
+
+.frutiger-button1:hover, .frutiger-button2:hover, .frutiger-button3:hover, .frutiger-button4:hover {
+  box-shadow: 0px 6px 12px 0px rgba(255, 255, 255, 0.6);
+}
+
+.frutiger-button1 .inner1::after, .frutiger-button2 .inner2::after, .frutiger-button3 .inner3::after, .frutiger-button4 .inner4::after {
+  box-shadow: inset 0px 2px 8px -2px #000a;
+}
+
+.frutiger-button1:active, .frutiger-button2:active, .frutiger-button3:active, .frutiger-button4:active {
+  box-shadow: 0px 0px 0px 0px #ccbaba00;
+}
+
+
+.inner1::before,
+.inner2::before,
+.inner3::before,
+.inner4::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(-65deg, #0000 40%, #fff7 50%, #0000 70%);
+  background: linear-gradient(-65deg, #ffffff00 40%, #fff7 50%, #0000 70%);
   background-size: 200% 100%;
   background-repeat: no-repeat;
   animation: thing 3s ease infinite;
@@ -171,31 +290,19 @@ header {
   border-radius: inherit;
   inset: 0 -8em;
   background: radial-gradient(circle at 50% -270%,
-      #fff 45%,
+      #fffefe 45%,
       #fff6 60%,
       #fff0 60%);
   transition: inherit;
 }
 
-.inner::after {
+.inner1::after, .inner2::after, .inner3::after, .inner4::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   transition: inherit;
-  box-shadow: inset 0px 2px 8px -2px #0000;
-}
-
-.frutiger-button:active .inner::after {
-  box-shadow: inset 0px 2px 8px -2px #000a;
-}
-
-.text {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-weight: 550;
-  transition: inherit;
+  box-shadow: inset 0px 2px 8px -2px #f8040400;
 }
 
 /* ================================= ESTILIZANDO  CAMPO CARROSSEL ================================== */
@@ -325,8 +432,8 @@ footer {
 }
 
 footer section {
-  font-size: 20px;
-  color: #fff;
+  font-size: 15px;
+  color: #ffffff;
   margin: 5px;
   display: flex;
 }
