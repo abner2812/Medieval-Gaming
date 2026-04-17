@@ -12,9 +12,12 @@ const cad = require("../models/extras.js")
 async function pesquisaExtras(nome_do_extra) {
     return await cad.pesquisar(nome_do_extra)
 }
-
+async function pesquisaExtrasID(id) {
+    return await cad.pesquisarPorID(id)
+}
 module.exports={
     cadastrarExtras,
     listarExtras,
-    pesquisaExtras
+    pesquisaExtras,
+    pesquisaExtrasID
 }

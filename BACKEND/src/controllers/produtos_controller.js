@@ -12,9 +12,19 @@ const cad = require("../models/produtos.js")
  async function pesquisarProdutos(nome_do_jogo){
      return await cad.pesquisar(nome_do_jogo)
  }
+ async function listarCategoria(categoria) {
+    return await cad.listarcategoria(categoria)
+ }
+
+ async function ListarBuscarPorId(id) {
+        return await cad.buscarPorId(id)
+    }
+
 
 module.exports={
     cadastrarProdutos,
     listarProdutos,
-    pesquisarProdutos
+    pesquisarProdutos,
+    listarCategoria,
+    ListarBuscarPorId
 }

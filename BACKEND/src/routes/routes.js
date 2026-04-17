@@ -68,6 +68,12 @@ router.get("/produtos/listar",async(req,res)=>{
 })
 
 // Rota para listar as [BLANK(TO BE REPLACED)] cadastradas
+router.get("/produtos/listarcategoria",async(req,res)=>{
+    let rs = await prod_controller.listarCategoria()
+    res.send({msg:rs})
+})
+
+// Rota para listar as [BLANK(TO BE REPLACED)] cadastradas
 router.get("/estoques/listar",async(req,res)=>{
     let rs = await estq_controller.listarEstoques()
     res.send({msg:rs})
@@ -112,16 +118,24 @@ router.get("/produtos/pesquisar",async(req,res)=>{
     res.send({msg:resul})
 })
 
-// router.get("/produtos/pesquisarPlataforma",async(req,res)=>{
-//     console.log(req.body.nome_do_jogo)
-//     let resul = await prod_controller.pesquisarProdutos(req.body.nome_do_jogo)
-//     res.send({msg:resul})
-// })
+
+router.get("/produtos/pesquisarid/:id",async(req,res)=>{
+    console.log(req.params.id)
+    let resul = await prod_controller.ListarBuscarPorId(req.params.id)
+    res.send({msg:resul})
+})
+
 
 // -- Extras:
 router.get("/extras/pesquisar",async(req,res)=>{
     console.log(req.body.nome_do_extra)
     let resul = await extra_controller.pesquisaExtras(req.body.nome_do_extra)
+    res.send({msg:resul})
+})
+
+router.get("/extras/pesquisarid/:id",async(req,res)=>{
+    console.log(req.params.id)
+    let resul = await extra_controller.pesquisaExtrasID(req.params.id)
     res.send({msg:resul})
 })
 

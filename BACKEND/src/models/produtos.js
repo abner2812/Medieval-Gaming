@@ -19,11 +19,11 @@ const con = require("../database/conexao.js")
         video],
         (erro,resultado)=>{
         if(erro){
-            console.error(erro)
+            // console.error(erro)
             return `Erro ao tentar cadastrar`
         }
         else{
-            console.log(resultado)
+            // console.log(resultado)
             return resultado
         }
     })
@@ -34,11 +34,11 @@ function listar(){
        
        con.query(`SELECT * FROM produtos ORDER BY nome_do_jogo`,(erro,resultado)=>{
            if (erro){
-            console.error(erro)
+            // console.error(erro)
             reject( `Erro ao tentar listar os produtos`)
         }
         else{
-            console.log(resultado)
+            // console.log(resultado)
             resolve (resultado)
         }
     }) 
@@ -49,21 +49,60 @@ function listar(){
     return new Promise((resolve,reject)=>{
         con.query(`SELECT * FROM produtos WHERE nome_do_jogo = ? `,nome_do_jogo,(erro,resultado)=>{
             if (erro){
-                console.error(erro)
+                // console.error(erro)
                 reject(`Erro ao tentar listar as produto`)
             }
             else{
-                console.log(resultado)
+                // console.log(resultado)
                 resolve(resultado)
             }
     })
     })
 }
 
+
+function listarcategoria(categoria){
+   return new Promise((resolve,reject)=>{
+       
+       con.query(`SELECT * FROM produtos WHERE categoria =?`,categoria,(erro,resultado)=>{
+           if (erro){
+            // console.error(erro)
+            reject( `Erro ao tentar listar os produtos`)
+        }
+        else{
+            // console.log(resultado)
+            resolve (resultado)
+        }
+    }) 
+    })
+}
+
+
+function buscarPorId(id){ 
+    return new Promise((resolve,reject)=>{
+
+        con.query(`SELECT * FROM produtos WHERE produtos.id_produtos = ${id}`,(erro,resultado)=>{
+            if(erro){
+                console.error(erro)
+                reject(`Erro ao listar as produtos`)
+            }
+            else{
+                console.log(resultado)
+                resolve(resultado)
+            }
+        })
+    })
+}
+
+
+
+
 module.exports={
     cadastrar,
     listar,
-    pesquisar
+    pesquisar,
+    listarcategoria,
+    buscarPorId
 }
 /*
 TESTE DO THUNDER

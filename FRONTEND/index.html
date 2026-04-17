@@ -8,199 +8,198 @@
     <meta name="keywords" content="videogames,digital, xbox,playstation,pc,nintendo-switch,">
     <title>Medieval Gaming</title>
     <link rel="icon" type="image/png" href="icone/dragao.ico">
-    <link rel="stylesheet" href="css/casa.css">
+    <link rel="stylesheet" href="css/jogo.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+<!-- #################################### INICIO BACEÇALHO DE BUSCA ######################################## -->
 
-<body>
-    <!-- barra no topo da pagina, versão da página inicial -->
-    <header id="inicio" width="100px;" height="auto;">
+<body onload="carregarHome()">
+    <header>
 
-        <div id="logo"><img src="icone/logo.png" alt="logo da Medieval Gaming"></div>
-        <nav>
-            <div id="categorias" class="frutiger-container">
-
-                <button class="frutiger-button">
-                    <div class="inner">
-                        <div class="top-white"></div>
-                        <span class="text">PC</span>
-                    </div>
-                </button>
-                <button class="frutiger-button">
-                    <div class="inner">
-                        <div class="top-white"></div>
-                        <span class="text">Xbox</span>
-                    </div>
-                </button>
-                <button class="frutiger-button">
-                    <div class="inner">
-                        <div class="top-white"></div>
-                        <span class="text">Nintendo Switch</span>
-                    </div>
-                </button>
-                <button class="frutiger-button">
-                    <div class="inner">
-                        <div class="top-white"></div>
-                        <span class="text">playstation</span>
-                    </div>
-                </button>
+        </div>
+        <div id="busca">
+            <div id="logo">
+                <img src="img/logo1.png" alt="">
             </div>
-        </nav>
-
-        <!-- AQUI VAI UMA BARRA DE PESQUISA A FORMATACAO VAI SER UMA BORDA FINA, COM O BACKGROUND FEITO EM UMA UM POUCO MAIS CLARA DO QUE A COR AO REDOR DA BARRA DA PESQUISA,-->
-
-        <!-- BARRA DE PESQUISA -->
-        <div class="height">
-            <label for="Height">pesquisar<sup></sup></label>
-            <input id="Height" type="text" autocomplete="off" name="text" class="input" />
-
-            <!-- BOTÃO DA LUPA  -->
-            <div id="botao-pesquisa"><img src="icone/lupa.png" alt="botão de pesquisa"></div>
-
-        </div>
-        <!-- AQUI VAI UM BOTAO DE PESQUISA, COM O ICONE DE LUPA, O BOTAO VAI SER DO MESMO TAMANHO DA BARRA DE PESQUISA, E VAI FICAR AO LADO DIREITO DELA -->
-        <div id="carrinho">
-            <img src="icone/icone2.png" style="width: 100%; height: auto;" alt="carrinho de compras">
-            <h3> CARRINHO DE COMPRAS</h3>
-        </div>
-        <div id="login">
-            <img src="icone/icone3.png" style="width: 100%; height: auto;" alt="login">
-            <h3>CADASTRE-SE AQUI</h3>
+            <div id="pesquisa">
+                <form onsubmit="return false">
+                    <input type="text" name="" id="">
+                    <button id="btnbuscar">
+                        <img src="img/lupa.png" alt="">
+                    </button>
+                </form>
+            </div>
+            <div id="usuario-compra">
+                <a href="#"><img src="img/icone3.png" alt=""><br>Bem Vindo(a)<br>Minha Conta</a>
+                <a href="#"><img src="img/icone2.png" alt=""> <br>0 </a>
+            </div>
         </div>
     </header>
-    <!-- barra de categorias, versão da página inicial -->
+    <!-- ############################  FINAL DO CABEÇALHO DE BUSCA ##############################-->
+
+    <!-- ################### Inicio da barra de Navegação ################# -->
+
+    <!--  BARRA DE DOTÃO  -->
     <nav>
+        <div id="categorias" class="frutiger-container">
+
+            <button class="frutiger-button1">
+                <div class="inner1">
+                    <div class="top-white"></div>
+                    <span class="text1">PC</span>
+                </div>
+            </button>
+            <button class="frutiger-button2">
+                <div class="inner2">
+                    <div class="top-white"></div>
+                    <span class="text2">Xbox</span>
+                </div>
+            </button>
+            <button class="frutiger-button3">
+                <div class="inner3">
+                    <div class="top-white"></div>
+                    <span class="text3">Nintendo Switch</span>
+                </div>
+            </button>
+            <button class="frutiger-button4">
+                <div class="inner4">
+                    <div class="top-white"></div>
+                    <span class="text4">Playstation</span>
+                </div>
+            </button>
+        </div>
     </nav>
-    <!-- From Uiverse.io by SelfMadeSystem -->
 
+    <!-- ##################################################### FINAL DA BARRA DE NAVEGAÇÃO ####################################### -->
 
+    <!-- ############################################## INÍCIO DO CARROSSEL ##################################################### -->
 
-    <!-- area do usuario -->
-    <div id="usuario">
-        <link rel="stylesheet" href="">
+    <div id="painel">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/card2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/card2.jpg " class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/card2.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
 
+    <!-- ############################################# FINAL DO CARROCEL ################################################## -->
 
 
+    <!-- ############################ INICIO DO CAMPO CARD ###################################### -->
     <main>
-        <div class="container"></div>
-        <div id="destaque">
-            <link rel="stylesheet" href="">
-        </div>
-        <div>
-            <h1>Popular</h1>
-            <link rel="stylesheet" href=""><img src="" alt=""></link>
-        </div>
-        <!-- POSIÇÃO DOS CARTÕES-->
-        <div class="container" id="conteudo">
-            <div class="card" data-tipo="artigos">
-                <img src="img/card1.jpg" alt="Imagem">
-                <div class="content">
-                    <h3>Título do Artigo</h3>
-                    <p>Descrição breve do conteúdo...</p>
-                </div>
-            </div>
-            <div class="card" data-tipo="videos">
-                <img src="img/card1.jpg" alt="Imagem">
-                <div class="content">
-                    <h3>Vídeo Interessante</h3>
-                    <p>Resumo do vídeo...</p>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h2>mais vendidos</h2>
-            <link rel="stylesheet" href=""><img src="" alt=""></link>
-        </div>
-        <!-- Cards de conteúdo -->
-        <div class="container" id="conteudo">
-            <div class="card" data-tipo="artigos">
-                <img src="img/card1.jpg" alt="Imagem">
-                <div class="content">
-                    <h3>Título do Artigo</h3>
-                    <p>Descrição breve do conteúdo...</p>
-                </div>
-            </div>
-            <div class="card" data-tipo="videos">
-                <img src="img/card1.jpg" alt="Imagem">
-                <div class="content">
-                    <h3>Vídeo Interessante</h3>
-                    <p>Resumo do vídeo...</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div>
-            <h3>categorias</h3>
-            <link rel="stylesheet" href=""><img src="" alt=""></link>
-            <!-- Cards de conteúdo -->
-            <div class="container" id="conteudo">
-                <div class="card" data-tipo="artigos">
-                    <img src="imagens/card1.jpg" alt="Imagem">
-                    <div class="content">
-                        <h3>Título do Artigo</h3>
-                        <p>Descrição breve do conteúdo...</p>
-                    </div>
-                </div>
-                <div class="card" data-tipo="videos">
-                    <img src="imagens/card1.jpg" alt="Imagem">
-                    <div class="content">
-                        <h3>Vídeo Interessante</h3>
-                        <p>Resumo do vídeo...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <section id="populares"></section>
+        <section id="mais_vendidos"></section>
+        <section id="CATEGORIAS"></section>
+
+
+
+
     </main>
-</body>
-<!-- RODAPÉ DO SITE -->
-<footer>
-    <footer class="footer titulo">
-        <div>
-            <h1>contatos</h1>
-        </div>
-        <div>
-            <h2>informações</h2>
-        </div>
+    <!-- ############################ FINAL DO CAMPO CARD ###################################### -->
 
-        <div class="footer-container">
 
-            <div class="footer-logo">
-                <h2>Meu Site</h2>
-                <p>Conecte-se conosco nas redes sociais:</p>
+
+
+
+
+
+    <!-- ############################## INCIO DO RODAPÉ ############################################ -->
+    <footer>
+
+        <section class="superior">
+            <div id="logo-redes">
+                <div class="logo">
+                    <img src="img/logo1.png" alt="">
+                </div>
+                <div class="redes">
+                    <img src="img/instagram2.png" alt="">
+                    <img src="img/facebook2 .png" alt="">
+                    <img src="img/youtube.png" alt="">
+                </div>
+            </div>
+            <div id="sobrenos">
+                <ul>
+                    <li><strong>Sobre Nós</strong></li>
+                    <li>Quem somos</li>
+                    <li>Vejam onde estão nossas livrarias</li>
+                    <li>Eventos</li>
+                </ul>
             </div>
 
-            <div class="footer-social">
-                <a href="https://github.com" target="_blank" class="social-icon">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://facebook.com" target="_blank" class="social-icon">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://discord.com" target="_blank" class="social-icon">
-                    <i class="fab fa-discord"></i>
-                </a>
+            <div id="aplicativo">
+                <ul>
+                    <li><strong>Aplicativo</strong></li><p>
+                            Baixe nosso aplicativo para aproveitar uma experiência de compra ainda mais rápida e conveniente. Com nosso app, você pode acessar nossa loja de jogos online a qualquer hora e em qualquer lugar.
+                    </p>
+                    <a href="#" class="app-btn apple">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+                        <li>Baixe nosso aplicativo para iOS</li>
+                    </a>
+                    <a href="#" class="app-btn google">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+                        <li>Baixe nosso aplicativo para Android</li>
+                    </a>
+                </ul>
             </div>
-
-            <div class="footer-apps">
-                <a href="#" class="app-btn google">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-                </a>
-
-                <a href="#" class="app-btn apple">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
-                </a>
+            <div id="pagamentos-selos">
+                <ul>
+                    <li><strong>Formas de Pagamento</strong></li>
+                    <li><img src="img/pagamentos.png" alt=""></li>
+                    <li><strong>Selos de Segurança</strong></li>
+                    <li><img src="img/selos-segurança.png" alt=""></li>
+                </ul>
             </div>
-        </div>
+        </section>
 
-        <p class="footer-copy">© 2026 Meu Site — Todos os direitos reservados.</p>
+
+
+        <!-- <section class="inferior">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section> -->
+
+
     </footer>
+    <!-- ################################################## FINAL DO RODAPÉ ##################################### -->
 
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    ``
-</footer>
+
+    <!-- ######## script carrossel ############################## -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="/FRONTEND/js/script.js"></script>
+
+</body>
 
 </html>
