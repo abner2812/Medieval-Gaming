@@ -2,8 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
-
+body{
+  background-color: #795548 !important;
+}
 
 /* ============================= CABEÇALHO ============================ */
 header {
@@ -300,7 +303,7 @@ header {
 
 }
 #painel img{
-  height: 700px;
+  height: 500px;
 }
 
 
@@ -312,23 +315,28 @@ header {
 
 
 
-/* ================================= ESTILIZANDO CAMPO CARD ================================== */
+/* ================================= ESTILIZANDO CAMPO CARD [INDEX] ================================== */
+.container{
+  background-color: #795548 ;
 
+}
 .row img{
-  height: 200px;
+  height: 200px;  
 }
+#populares .row, #mais_vendidos .row, #CATEGORIAS .row{ 
+  display: flex ;
+  justify-content: space-around;
+  background-color: #795548 !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+
 /* Populares */
 #populares h2 {
   display: flex;
   justify-content: center;
   font-size: 36pt;
-}
-#populares .row{ 
-  display: flex ;
-  justify-content: center;
-  background-color: #795548;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 /* Mais Vendidos */
@@ -337,28 +345,12 @@ header {
   justify-content: center;
   font-size: 36pt;
 }
-#mais_vendidos .row{
-  display: flex ;
-  justify-content: center;
-  background-color: #795548;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
 
 /* Categorias */
 #CATEGORIAS h2 {
   display: flex;
   justify-content: center;
   font-size: 36pt;
-}
-#CATEGORIAS .row{
-  display: flex ;
-  justify-content: center;
-  background-color: #795548;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-
 }
 
 /* ================================= ESTILIZANDO O RODAPÉ ================================== */
@@ -447,3 +439,28 @@ footer #sobrenos{
 footer  .aplicativos{
     margin-top: 5px;
 }
+
+
+
+/* ========================================================================================== */
+
+
+/* ================================= ESTILIZANDO O CARD [PAGINA_JOGO] ================================== */
+
+.miniatura {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+}
+.miniatura img{
+  height: 68px !important;
+  /* width: 78px !important; */
+    width: 20%;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid silver;
+}
+.miniatura a #video{
+  align-items: center;
+}
+

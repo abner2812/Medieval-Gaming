@@ -116,7 +116,7 @@ function carregarPagina_Jogos(){
         id = window.location.search.split("=")
 
         let detalhesproduto = document.getElementById("detalhesjogo")
-        let linha = `<div class=row>`
+        let linha = `<div class=row class="container">`
 
         let extras = document.getElementById("extras-jogo")
         extras.innerHTML = `<h2>Extras</h2>`
