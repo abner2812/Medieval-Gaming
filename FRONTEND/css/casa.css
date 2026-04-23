@@ -278,3 +278,474 @@ header {
   transition: inherit;
   box-shadow: inset 0px 2px 8px -2px #f8040400;
 }
+
+
+
+
+/* ########################################################################################################################################################################### */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  background-color: #795548 !important;
+}
+
+/* ============================= CABEÇALHO ============================ */
+header {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    background-size: cover;
+    position:fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 10000;
+  } 
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+/* ============================ ESTILIZANDO BUSCA =========================================== */
+
+#busca {
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+  background-image: url("../img/cabe2.png");
+  background-size: 101% ;
+  background-position: center;
+  width: 100%;
+  min-height: 50px;
+  height: 165px;
+}
+
+#busca #logo img {
+  align-items: start;
+  width: 350px;
+  height: 100px;
+}
+
+#busca #pesquisa form {
+  border: 1px solid rgb(100, 73, 0);
+  padding: 10px;
+  width: 700px;
+  border-radius: 30px;
+  background-color: rgba(85, 83, 83, 0.384);
+}
+
+#busca #pesquisa input {
+  width: 90%;
+  padding: 5px;
+  border: 0;
+  background-color: rgba(44, 44, 44, 0);
+  outline: none;
+}
+
+#busca #pesquisa button {
+  width: 6%;
+  border: 0;
+  background-color: rgba(190, 190, 190, 0);
+}
+
+#busca #pesquisa img {
+  width: 30px;
+  height: 40px;
+}
+
+#busca #usuario-compra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 0px;
+}
+
+#usuario-compra a img {
+  width: 50px;
+  height: 60px;
+}
+
+#busca #usuario-compra a {
+  text-align: center;
+  padding: 0 35px;
+  text-decoration: none;
+  font-size: 10pt;
+  color: rgb(21, 255, 0);
+  margin-left: 2px;
+}
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+
+
+/* ======================================= ESTILIZAÇÃO DOS BOTÕES DE NAVEGAÇÃO =================================================== */
+#categorias {
+  
+  /* background-image: url("../img/titulo.png");
+  background-size: 70% 75px;
+  background-repeat: no-repeat; Evita a repetição
+  background-position: center;  Centraliza a imagem */
+  background-color: rgb(220, 232, 236)  ;
+  /* #424242 */
+  display: flex; /* display: grid; */ 
+  align-items: center; /* align-items: center; */
+  justify-content: center;
+  gap: 200px;
+  margin-top: 150px;
+  
+  position: fixed;
+  top: 5px;
+  z-index: 1000;
+  justify-items: center;
+  height: 71px;
+  width: 100%;
+}
+/* ============BOTAO DO PC ======== */
+.frutiger-button1 {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  border: 0;
+  text-shadow: 1px 1px #000a;
+  background: linear-gradient(#b6e2fc, #00c3ff);
+  box-shadow: 0px 4px 6px 0px #0008;
+  transition: 0.3s all;
+}
+
+.text1 {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  gap: 10px;
+}
+.inner1 {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 4px;
+  background: radial-gradient(circle at 50% 100%, #ffffff 10%, #30f8f800 55%),
+  linear-gradient(#204f61, #1847a0);
+  overflow: hidden;
+  transition: inherit;
+}
+/* ============BOTAO DO XBOX ======== */
+.frutiger-button2 {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  border: 0;
+  text-shadow: 1px 1px rgba(17, 203, 228, 0.384);
+  background: linear-gradient(#01ff16, #07b354);
+  box-shadow: 0px 4px 6px 0px rgb(24, 90, 4);
+  transition: 0.3s all;
+}
+
+.text2 {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  gap: 10px;
+}
+.inner2 {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 4px;
+  background: radial-gradient(circle at 50% 100%, #ffffff 10%, #30f8f800 55%),
+  linear-gradient(#0f270cf8, #08f57e);
+  overflow: hidden;
+  transition: inherit;
+}
+/* ============BOTAO DO NINTENDO SWITCH ======== */
+.frutiger-button3 {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  border: 0;
+  text-shadow: 1px 1px rgba(17, 203, 228, 0.384);
+  background: linear-gradient(#b30c0c, #ffacaccb);
+  box-shadow: 0px 4px 6px 0px rgba(94, 7, 7, 0.533);
+  transition: 0.3s all;
+}
+
+.text3 {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  gap: 10px;
+}
+.inner3 {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 4px;
+  background: radial-gradient(circle at 50% 100%, #ffe8e8 10%, #30f8f800 55%),
+  linear-gradient(#612020, #fc2121);
+  overflow: hidden;
+  transition: inherit;
+}
+
+/* ============BOTAO DO PLAYSTATION ======== */
+.frutiger-button4 {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  border: 0;
+  text-shadow: 1px 1px rgba(16, 0, 247, 0.384);
+  background: linear-gradient(#274df7, #1100ff);
+  box-shadow: 0px 4px 6px 0px rgba(19, 48, 45, 0.533);
+  transition: 0.3s all;
+}
+
+.text4 {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  gap: 10px;
+}
+.inner4 {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 4px;
+  background: radial-gradient(circle at 50% 100%, #ffffff 10%, #30f8f800 55%),
+  linear-gradient(#030964, #0050fd);
+  overflow: hidden;
+  transition: inherit;
+}
+
+.frutiger-button1:hover, .frutiger-button2:hover, .frutiger-button3:hover, .frutiger-button4:hover {
+  box-shadow: 0px 6px 12px 0px rgba(255, 255, 255, 0.6);
+}
+
+.frutiger-button1 .inner1::after, .frutiger-button2 .inner2::after, .frutiger-button3 .inner3::after, .frutiger-button4 .inner4::after {
+  box-shadow: inset 0px 2px 8px -2px #000a;
+}
+
+.frutiger-button1:active, .frutiger-button2:active, .frutiger-button3:active, .frutiger-button4:active {
+  box-shadow: 0px 0px 0px 0px #ccbaba00;
+}
+
+
+.inner1::before,
+.inner2::before,
+.inner3::before,
+.inner4::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-65deg, #ffffff00 40%, #fff7 50%, #0000 70%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: thing 3s ease infinite;
+}
+
+@keyframes thing {
+  0% {
+    background-position: 130%;
+    opacity: 1;
+  }
+
+  to {
+    background-position: -166%;
+    opacity: 0;
+  }
+}
+
+
+
+/* ================================= ESTILIZANDO  CAMPO CARROSSEL ================================== */
+
+
+#painel{
+  margin-top: 227px;
+
+}
+#painel img{
+  height: 500px;
+}
+
+
+
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+
+
+/* ================================= ESTILIZANDO CAMPO CARD [INDEX] ================================== */
+.container{
+  background-color: #795548 ;
+
+}
+.row img{
+  height: 200px;  
+}
+#populares .row, #mais_vendidos .row, #CATEGORIAS .row{ 
+  display: flex ;
+  justify-content: space-around;
+  background-color: #795548 !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+
+/* Populares */
+#populares h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 36pt;
+}
+
+/* Mais Vendidos */
+#mais_vendidos h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 36pt;
+}
+
+/* Categorias */
+#CATEGORIAS h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 36pt;
+}
+
+/* ================================= ESTILIZANDO O RODAPÉ ================================== */
+
+footer {
+  background-image: url("../img/rodape.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+footer section {
+  font-size: 15px;
+  color: #ffffff;
+  margin: 5px;
+  display: flex;
+}
+
+footer section div {
+  flex: 1;
+  height: 300px;
+  /* border: 2px solid yellow; */
+  margin: 5px;
+  padding-top: 2px;
+  background-color: #ccaaaa00;
+}
+
+footer section div .logo img {
+  width: 200px;
+  height: 130px;
+  margin-top: 20px;
+  background-color: #ccaaaa00;
+}
+
+footer section div .redes img {
+  width: 50px;
+  height: 50px;
+  
+}
+
+footer section #logo-redes {
+  display: flex;
+  flex-direction: column; 
+}
+footer section #logo-redes .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer section #logo-redes .redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer section #logo-redes .redes img {
+  width: 40px;
+  height: 40px;
+}
+footer section #aplicativo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer section #aplicativo img {
+  width: 150px;
+  height: 50px;
+}
+footer section #pagamentos-selos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  flex-direction:row; 
+}
+footer section #pagamentos-selos img {
+  width: 100px;
+  height: 50px;
+}
+
+footer #sobrenos{
+    margin-top: 50px;
+}
+
+footer  .aplicativos{
+    margin-top: 5px;
+}
+
+
+
+/* ========================================================================================== */
+
+
+/* ================================= ESTILIZANDO O CARD [PAGINA_JOGO] ================================== */
+
+.miniatura {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+}
+.miniatura img{
+  height: 68px !important;
+  /* width: 78px !important; */
+    width: 20%;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid silver;
+}
+.miniatura a #video{
+  align-items: center;
+}
+
