@@ -108,6 +108,9 @@ function carregarHome() {
 
 }
 
+// #######################################################################################################################################################################
+// #######################################################################################################################################################################
+// #######################################################################################################################################################################
 
 
 function trocafoto(FOTO) {
@@ -229,7 +232,10 @@ function carregarPagina_Jogos() {
 
 }
 
-
+// ####################################################################################################################################################################### //
+// ####################################################################################################################################################################### //
+// ####################################################################################################################################################################### //
+// ####################################################################################################################################################################### //
 
 function carregarPlataforma() {
     const populares1 = document.getElementById("populares1")
@@ -241,7 +247,7 @@ function carregarPlataforma() {
     const categoria1 = document.getElementById("CATEGORIAS1")
     categoria1.innerHTML = `<h2>CATEGORIAS</h2>`
     // Construir a linha para adicionar os cards
-    let linha = `<div class="row">`
+    let linhaP = `<div class="row">`
 
     // Vamos fazer um fetch(busca) no backend para
     //obter todos os produtos de lançamentos
@@ -249,7 +255,7 @@ function carregarPlataforma() {
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
-                let card = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
+                let cardP = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
@@ -260,16 +266,16 @@ function carregarPlataforma() {
                         </div>
                     </div>
                 </div>`
-                linha += card
+                linhaP += cardP
             })
-            linha += `</div>`
-            populares1.innerHTML += linha
+            linhaP += `</div>`
+            populares1.innerHTML += linhaP
         })
 
 
 
     // Construir a linha para adicionar os cards
-    let linhaMV = `<div class="row">`
+    let linhaPMV = `<div class="row">`
 
     // Vamos fazer um fetch(busca) no backend para
     //obter todos os produtos de lançamentos
@@ -277,7 +283,7 @@ function carregarPlataforma() {
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
-                let cardMV = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
+                let cardPMV = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
@@ -288,15 +294,15 @@ function carregarPlataforma() {
                         </div>
                     </div>
                 </div>`
-                linhaMV += cardMV
+                linhaPMV += cardPMV
             })
-            linhaMV += `</div>`
-            mais_vendidos1.innerHTML += linhaMV
+            linhaPMV += `</div>`
+            mais_vendidos1.innerHTML += linhaPMV
         })
 
 
     // Construir a linha para adicionar os cards
-    let linhaCat = `<div class="row">`
+    let linhaPCat = `<div class="row">`
 
     // Vamos fazer um fetch(busca) no backend para
     //obter todos os produtos de lançamentos
@@ -304,7 +310,7 @@ function carregarPlataforma() {
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
-                let cardCat = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
+                let cardPCat = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
@@ -315,10 +321,10 @@ function carregarPlataforma() {
                         </div>
                     </div>
                 </div>`
-                linhaCat += cardCat
+                linhaPCat += cardPCat
             })
-            linhaCat += `</div>`
-            categoria1.innerHTML += linhaCat
+            linhaPCat += `</div>`
+            categoria1.innerHTML += linhaPCat
         })
 
 
