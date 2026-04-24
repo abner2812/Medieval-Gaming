@@ -118,7 +118,7 @@ router.get("/produtos/pesquisar",async(req,res)=>{
     res.send({msg:resul})
 })
 
-router.get("/produtos/pesquisarplataforma/",async(req,res)=>{
+router.get("/produtos/pesquisarplataforma/:plataforma",async(req,res)=>{
     console.log(req.params.plataforma)
     let resul = await prod_controller.pesquisarProdutosPlataforma(req.params.plataforma)
     res.send({msg:resul})

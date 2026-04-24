@@ -15,6 +15,10 @@ function paginadetalhes(id) {
 }
 
 
+function paginadetalhes(plataforma) {
+    window.location.href = `pagina_plataforma.html?plataforma=${plataforma}`
+}
+
 function carregarHome() {
     const populares = document.getElementById("populares")
     populares.innerHTML = `<h2>POPULARES</h2> `
@@ -237,7 +241,13 @@ function carregarPagina_Jogos() {
 // ####################################################################################################################################################################### //
 // ####################################################################################################################################################################### //
 
+function botaoNav(){
+    let plataformaPC = document.getElementById("populares1")
+}
+
 function carregarPlataforma() {
+
+
     const populares1 = document.getElementById("populares1")
     populares1.innerHTML = `<h2>POPULARES</h2> `
 
@@ -251,7 +261,7 @@ function carregarPlataforma() {
 
     // Vamos fazer um fetch(busca) no backend para
     //obter todos os produtos de lançamentos
-    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma")
+    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma/" + plataforma)
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
@@ -279,7 +289,7 @@ function carregarPlataforma() {
 
     // Vamos fazer um fetch(busca) no backend para
     //obter todos os produtos de lançamentos
-    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma")
+    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma/")
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
@@ -306,7 +316,7 @@ function carregarPlataforma() {
 
     // Vamos fazer um fetch(busca) no backend para
     //obter todos os produtos de lançamentos
-    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma")
+    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma/")
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
