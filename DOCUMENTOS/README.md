@@ -288,7 +288,7 @@ vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
 
 
 * Link do repositório:
-### Telas Iniciais e Navegação
+# Telas Iniciais e Navegação
 
 Visualizações da página principal da aplicação, mostrando diferentes layouts ou conteúdos.
 
