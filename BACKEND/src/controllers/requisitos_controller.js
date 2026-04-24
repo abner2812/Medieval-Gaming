@@ -13,8 +13,8 @@ async function pesquisarRequisitos(id_produtos) {
     return await cad.pesquisar(id_produtos)
 }
 
-async function pesquisarRequisitosID(id_extras) {
-    return await cad.pesquisarPorID(id_extras)
+async function pesquisarRequisitosID(id) {
+    return await cad.pesquisarPorID(id)
 }
 module.exports={
     cadastrarRequisitos,

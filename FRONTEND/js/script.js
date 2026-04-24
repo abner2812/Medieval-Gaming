@@ -61,7 +61,7 @@ function carregarHome() {
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
-                let cardMV = `<div class="col-sm-3">
+                let cardMV = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
@@ -88,7 +88,7 @@ function carregarHome() {
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
-                let cardCat = `<div class="col-sm-3">
+                let cardCat = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
@@ -134,6 +134,8 @@ function carregarPagina_Jogos() {
     let extras = document.getElementById("extras-jogo")
     extras.innerHTML = `<h2>Extras</h2>`
 
+    let requisitos = document.getElementById("requisitos-sistema")
+    requisitos.innerHTML = `<h2>requisitos</h2>`
 
     fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarid/" + id[1])
         .then((response) => response.json())
@@ -191,7 +193,8 @@ function carregarPagina_Jogos() {
         .then((rs) => {
             rs.msg.map((item) => {
                 let listaEX = `<ul class="list-group">
-                        <li class="list-group-item">${item.NOME_DO_JOGO}</li>
+
+                        <li class="list-group-item" >${item.NOME_DO_JOGO}</li>
                         <li class="list-group-item">${item.NOME_DO_EXTRA}</li>
                     </ul>`
 
@@ -218,13 +221,105 @@ function carregarPagina_Jogos() {
                         <li class="list-group-item">${item.CONEXAO_INTERNET}</li>
                         <li class="list-group-item">${item.OUTROS}</li>
                     </ul>`
-
                 linhaREQ += listaREQ
             })
             linhaREQ += `</div>`
-            extras.innerHTML = linhaREQ
+            requisitos.innerHTML = linhaREQ
         })
 
 }
 
 
+
+function carregarPlataforma() {
+    const populares1 = document.getElementById("populares1")
+    populares1.innerHTML = `<h2>POPULARES</h2> `
+
+    const mais_vendidos1 = document.getElementById("mais_vendidos1")
+    mais_vendidos1.innerHTML = `<h2>MAIS VENDIDOS</h2>`
+
+    const categoria1 = document.getElementById("CATEGORIAS1")
+    categoria1.innerHTML = `<h2>CATEGORIAS</h2>`
+    // Construir a linha para adicionar os cards
+    let linha = `<div class="row">`
+
+    // Vamos fazer um fetch(busca) no backend para
+    //obter todos os produtos de lançamentos
+    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma")
+        .then((response) => response.json())
+        .then((rs) => {
+            rs.msg.map((item) => {
+                let card = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
+                    <div class="card">
+                        <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.NOME_DO_JOGO}</h5>
+                            <p class="card-text">${item.PLATAFORMA}</p>
+                            <h6>${item.PRECO}</h6>
+                            <a href="#" onclick="adicionar(${item.ID_PRODUTO})" class="btn btn-primary">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>`
+                linha += card
+            })
+            linha += `</div>`
+            populares1.innerHTML += linha
+        })
+
+
+
+    // Construir a linha para adicionar os cards
+    let linhaMV = `<div class="row">`
+
+    // Vamos fazer um fetch(busca) no backend para
+    //obter todos os produtos de lançamentos
+    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma")
+        .then((response) => response.json())
+        .then((rs) => {
+            rs.msg.map((item) => {
+                let cardMV = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
+                    <div class="card">
+                        <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">${item.NOME_DO_JOGO}</a></h5>
+                            <p class="card-text">${item.PLATAFORMA}</p>
+                            <h6>${item.PRECO}</h6>
+                            <a href="#" onclick="adicionar(${item.ID_PRODUTO})" class="btn btn-primary">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>`
+                linhaMV += cardMV
+            })
+            linhaMV += `</div>`
+            mais_vendidos1.innerHTML += linhaMV
+        })
+
+
+    // Construir a linha para adicionar os cards
+    let linhaCat = `<div class="row">`
+
+    // Vamos fazer um fetch(busca) no backend para
+    //obter todos os produtos de lançamentos
+    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma")
+        .then((response) => response.json())
+        .then((rs) => {
+            rs.msg.map((item) => {
+                let cardCat = `<div class="col-sm-3" onclick=paginadetalhes(${item.ID_PRODUTOS})>
+                    <div class="card">
+                        <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.NOME_DO_JOGO}</h5>
+                            <p class="card-text">${item.PLATAFORMA}</p>
+                            <h6>${item.PRECO}</h6>
+                            <a href="#" onclick="adicionar(${item.ID_PRODUTO})" class="btn btn-primary">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>`
+                linhaCat += cardCat
+            })
+            linhaCat += `</div>`
+            categoria1.innerHTML += linhaCat
+        })
+
+
+}

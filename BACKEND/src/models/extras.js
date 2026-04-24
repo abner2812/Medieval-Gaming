@@ -66,7 +66,7 @@ function listar(){
 function pesquisarPorID(id){ /* Codigo do Professor(INICÍO) */
     return new Promise((resolve,reject)=>{
 
-        con.query(`SELECT extras.* ,produtos.* FROM extras INNER JOIN produtos on extras.id_extras=produtos.id_produtos WHERE extras.id_produtos= ${id}`,(erro,resultado)=>{
+        con.query(`SELECT extras.* ,produtos.* FROM extras INNER JOIN produtos on extras.id_produtos=produtos.id_produtos WHERE extras.id_produtos= ${id}`,(erro,resultado)=>{
 //      con.query(`SELECT produto.* ,categoria.* FROM produto INNER JOIN categoria on produto.id_categoria=categoria.id_categoria WHERE produto.id_produto= ${id}`,(erro,resultado)=>{
             if(erro){
                 console.error(erro)

@@ -118,6 +118,11 @@ router.get("/produtos/pesquisar",async(req,res)=>{
     res.send({msg:resul})
 })
 
+router.get("/produtos/pesquisarplataforma/",async(req,res)=>{
+    console.log(req.params.plataforma)
+    let resul = await prod_controller.pesquisarProdutosPlataforma(req.params.plataforma)
+    res.send({msg:resul})
+})
 
 router.get("/produtos/pesquisarid/:id",async(req,res)=>{
     console.log(req.params.id)
@@ -170,10 +175,13 @@ router.get("/requisitos/pesquisar",async(req,res)=>{console.log(req.body.id_prod
 
 router.get("/requisitos/pesquisarid/:id",async(req,res)=>{
     console.log(req.params.id);
-    let resul = await reqs_controller.pesquisarRequisitos(req.params.id);
+    let resul = await reqs_controller.pesquisarRequisitosID(req.params.id);
     res.send({msg:resul})
 })
-
+// router.get("/extras/pesquisarid/:id",async(req,res)=>{
+//     console.log(req.params.id)
+//     let resul = await extra_controller.pesquisaExtrasID(req.params.id)
+//     res.send({msg:resul})
 
 module.exports = router
  
