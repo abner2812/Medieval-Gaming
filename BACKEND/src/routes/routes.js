@@ -118,12 +118,20 @@ router.get("/produtos/pesquisar",async(req,res)=>{
     res.send({msg:resul})
 })
 
+router.get("/produtos/pesquisarplataforma/:plataforma",async(req,res)=>{
+    console.log(req.params.plataforma)
+    let resul = await prod_controller.pesquisarProdutosPlataforma(req.params.plataforma)
+    res.send({msg:resul})
+})
 
 router.get("/produtos/pesquisarid/:id",async(req,res)=>{
     console.log(req.params.id)
     let resul = await prod_controller.ListarBuscarPorId(req.params.id)
     res.send({msg:resul})
 })
+
+
+
 
 
 // -- Extras:
@@ -139,6 +147,11 @@ router.get("/extras/pesquisarid/:id",async(req,res)=>{
     res.send({msg:resul})
 })
 
+
+
+
+
+// -- Venda
 router.get("/vendas/pesquisar",async(req,res)=>{
     console.log(req.body.id_clientes)
     let resul = await vend_controller.pesquisaVendas(req.body.id_clientes)
@@ -154,7 +167,21 @@ router.get("/itensvendas/pesquisar",async(req,res)=>{
 router.get("/estoques/pesquisar",async(req,res)=>{console.log(req.body.id_produtos);let resul = await estq_controller.pesquisarEstoques(req.body.id_produtos);res.send({msg:resul})
 })
 
-router.get("/requisistos/pesquisar",async(req,res)=>{console.log(req.body.id_produtos);let resul = await reqs_controller.pesquisarRequisitos(req.body.id_produtos);res.send({msg:resul})})
+
+
+
+// -- Requisitos
+router.get("/requisitos/pesquisar",async(req,res)=>{console.log(req.body.id_produtos);let resul = await reqs_controller.pesquisarRequisitos(req.body.id_produtos);res.send({msg:resul})})
+
+router.get("/requisitos/pesquisarid/:id",async(req,res)=>{
+    console.log(req.params.id);
+    let resul = await reqs_controller.pesquisarRequisitosID(req.params.id);
+    res.send({msg:resul})
+})
+// router.get("/extras/pesquisarid/:id",async(req,res)=>{
+//     console.log(req.params.id)
+//     let resul = await extra_controller.pesquisaExtrasID(req.params.id)
+//     res.send({msg:resul})
 
 module.exports = router
  

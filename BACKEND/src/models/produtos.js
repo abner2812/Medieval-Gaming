@@ -45,7 +45,7 @@ function listar(){
     })
 }
 
- function pesquisar(nome_do_jogo){
+function pesquisar(nome_do_jogo){
     return new Promise((resolve,reject)=>{
         con.query(`SELECT * FROM produtos WHERE nome_do_jogo = ? `,nome_do_jogo,(erro,resultado)=>{
             if (erro){
@@ -94,7 +94,20 @@ function buscarPorId(id){
     })
 }
 
-
+function pesquisarPlataforma(plataforma){
+    return new Promise((resolve,reject)=>{
+        con.query(`SELECT * FROM produtos WHERE plataforma = "${plataforma}" `,(erro,resultado)=>{
+            if (erro){
+                // console.error(erro)
+                reject(`Erro ao tentar listar as produto`)
+            }
+            else{
+                // console.log(resultado)
+                resolve(resultado)
+            }
+    })
+    })
+}
 
 
 module.exports={
@@ -102,7 +115,8 @@ module.exports={
     listar,
     pesquisar,
     listarcategoria,
-    buscarPorId
+    buscarPorId,
+    pesquisarPlataforma
 }
 /*
 TESTE DO THUNDER

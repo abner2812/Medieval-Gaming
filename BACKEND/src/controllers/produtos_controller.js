@@ -19,12 +19,15 @@ const cad = require("../models/produtos.js")
  async function ListarBuscarPorId(id) {
         return await cad.buscarPorId(id)
     }
-
+ async function pesquisarProdutosPlataforma(plataforma){
+     return await cad.pesquisarPlataforma(plataforma)
+ }
 
 module.exports={
     cadastrarProdutos,
     listarProdutos,
     pesquisarProdutos,
     listarCategoria,
-    ListarBuscarPorId
+    ListarBuscarPorId,
+    pesquisarProdutosPlataforma
 }

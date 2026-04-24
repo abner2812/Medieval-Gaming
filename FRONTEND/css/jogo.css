@@ -467,20 +467,54 @@ footer #aplicativo{
 
 /* ================================= ESTILIZANDO O CARD [PAGINA_JOGO] ================================== */
 
+#pjogoimgs{
+  background-color: lightgray;
+}
+
+/* ==== MINIATURA ==== */
 .miniatura {
   display: flex;
-  justify-content: stretch;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .miniatura img{
   height: 68px !important;
   /* width: 78px !important; */
     width: 20%;
-    margin: 5px;
+    margin: 2.5px;
     cursor: pointer;
     border: 1px solid silver;
 }
-.miniatura a #video{
-  align-items: center;
+
+/* ==== DETALHES ==== */
+#pjogo{
+  background-color: #9e9e9e;
+  border: 1px solid black; 
+  border-radius: 0;
+}
+#detalhes1{
+  font-size: 24pt !important;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
+#detalhes2{
+  font-size: medium;
+  padding-left: 5px;
+  text-align: justify;
+}
+
+/* ============================================= EXTRAS ================================================ */
+
+/* ============================================= REQUISITOS ============================================= */
+
+#requisitos {
+  margin-top: 75px;
+}
+
+#requisitos li{
+  background-color: #9e9e9e ;
+  border: 1px  thin gray;
+  border-radius: 0;
+  
+}

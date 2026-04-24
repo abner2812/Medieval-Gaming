@@ -55,10 +55,28 @@ function pesquisar(id_produtos){
 })
 }
 
+function pesquisarPorID(id){ /* Codigo do Professor(INICÍO) */
+    return new Promise((resolve,reject)=>{
+
+        con.query(`SELECT requisitos.* ,produtos.* FROM requisitos INNER JOIN produtos on requisitos.id_produtos=produtos.id_produtos WHERE requisitos.id_produtos= ${id}`,(erro,resultado)=>{
+//      con.query(`SELECT produto.* ,categoria.* FROM produto INNER JOIN categoria on produto.id_categoria=categoria.id_categoria WHERE produto.id_produto= ${id}`,(erro,resultado)=>{
+            if(erro){
+                console.error(erro)
+                reject(`Erro ao listar as produtos`)
+            }
+            else{
+                console.log(resultado);
+                resolve(resultado)
+            }
+        })
+    })
+}
+
 module.exports={
     cadastrar,
     listar,
-    pesquisar
+    pesquisar,
+    pesquisarPorID
 }
  /*
 TESTE DO THUNDER
