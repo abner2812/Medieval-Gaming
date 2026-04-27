@@ -319,6 +319,9 @@ header {
 
 
 /* ================================= ESTILIZANDO CAMPO CARD [INDEX] ================================== */
+.card{
+  margin-bottom: 8px;
+}
 .container{
   background-color: #795548 ;
 
@@ -332,7 +335,7 @@ header {
   background-color: #795548 !important;
   padding-top: 10px;
   padding-bottom: 10px;
-  
+  margin-bottom: 5px;
 }
 
 /* Populares */
@@ -340,6 +343,7 @@ header {
   display: flex;
   justify-content: center;
   font-size: 36pt;
+  margin-top: 15px;
 }
 
 /* Mais Vendidos */
@@ -347,6 +351,7 @@ header {
   display: flex;
   justify-content: center;
   font-size: 36pt;
+  margin-top: 15px;
 }
 
 /* Categorias */
@@ -354,6 +359,7 @@ header {
   display: flex;
   justify-content: center;
   font-size: 36pt;
+  margin-top: 15px;
 }
 
 /* ================================= ESTILIZANDO O RODAPÉ ================================== */
@@ -467,6 +473,10 @@ footer #aplicativo{
 
 /* ================================= ESTILIZANDO O CARD [PAGINA_JOGO] ================================== */
 
+#jogo h2{
+  font-size: 36pt;
+}
+
 #pjogoimgs{
   background-color: lightgray;
 }
@@ -484,6 +494,10 @@ footer #aplicativo{
     margin: 2.5px;
     cursor: pointer;
     border: 1px solid silver;
+}
+.miniatura #video{
+  margin-top: 25px;
+  border: 2px solid black;
 }
 
 /* ==== DETALHES ==== */
@@ -504,7 +518,6 @@ footer #aplicativo{
   text-align: justify;
 }
 
-/* ============================================= EXTRAS ================================================ */
 
 /* ============================================= REQUISITOS ============================================= */
 
@@ -518,3 +531,50 @@ footer #aplicativo{
   border-radius: 0;
   
 }
+
+
+/* ============================================= PLATAFORMA ================================================ */
+
+/* .frutiger-button1, #populares1, #mais_vendidos1, #CATEGORIAS1{
+  background-color: #b6e2fc  !important;
+}
+
+.frutiger-button2, #populares1, #mais_vendidos1, #CATEGORIAS1{
+  background-color: #01ff16  !important;
+}
+
+.frutiger-button3, #populares1, #mais_vendidos1, #CATEGORIAS1{
+  background-color: #b30c0c  !important;
+}
+
+.frutiger-button4, #populares1, #mais_vendidos1, #CATEGORIAS1{
+  background-color: #0050fd  ;
+} */
+
+/* .container{
+  background-color: #795548 ;
+
+}
+
+.row img{
+  height: 200px;  
+}
+
+*/
+#populares1 .row, #mais_vendidos1 .row, #CATEGORIAS1 .row{ 
+  display: flex ;
+  justify-content: space-around;
+  background-color: #795548 !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+} 
+
+
+ #populares1 h2, #mais_vendidos1 h2, #CATEGORIAS1 h2{
+  display: flex;
+  justify-content: center;
+  font-size: 36pt;
+  margin-top: 15px;
+ }
+

@@ -1,3 +1,6 @@
+
+
+
 fetch("http://127.0.0.1:3001/api/v1/produto/listar")
     .then((response) => response.json())
     .then((rs) => {
@@ -14,8 +17,7 @@ function paginadetalhes(id) {
     window.location.href = `pagina_jogo.html?id_produto=${id}`
 }
 
-
-function paginadetalhes(plataforma) {
+function paginaplataforma(plataforma) {
     window.location.href = `pagina_plataforma.html?plataforma=${plataforma}`
 }
 
@@ -41,7 +43,7 @@ function carregarHome() {
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">${item.NOME_DO_JOGO}</h5>
+                            <h5 class="card-title">${item.NOME_DO_JOGO.substring(0,24)}</h5>
                             <p class="card-text">${item.PLATAFORMA}</p>
                             <h6>${item.PRECO}</h6>
                             <a href="#" onclick="adicionar(${item.ID_PRODUTO})" class="btn btn-primary">Adicionar ao Carrinho</a>
@@ -69,7 +71,7 @@ function carregarHome() {
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="#">${item.NOME_DO_JOGO}</a></h5>
+                            <h5 class="card-title"><a href="#">${item.NOME_DO_JOGO.substring(0,27)}</a></h5>
                             <p class="card-text">${item.PLATAFORMA}</p>
                             <h6>${item.PRECO}</h6>
                             <a href="#" onclick="adicionar(${item.ID_PRODUTO})" class="btn btn-primary">Adicionar ao Carrinho</a>
@@ -96,7 +98,7 @@ function carregarHome() {
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">${item.NOME_DO_JOGO}</h5>
+                            <h5 class="card-title">${item.NOME_DO_JOGO.substring(0,27)}</h5>
                             <p class="card-text">${item.PLATAFORMA}</p>
                             <h6>${item.PRECO}</h6>
                             <a href="#" onclick="adicionar(${item.ID_PRODUTO})" class="btn btn-primary">Adicionar ao Carrinho</a>
@@ -126,6 +128,37 @@ function exibirfoto(FOTO) {
     FOTO = document.getElementById("fotoprincipal").src
     let img = document.getElementById("imagem")
     img.innerHTML = ` <img src=${FOTO}>`
+}
+
+
+if(!window.localStorage.getItem("carrinho")){
+
+    var lista_produtos = []
+}
+else{
+    lista_produtos=JSON.parse((localStorage.getItem("carrinho")))
+}
+console.log(lista_produtos)
+
+function adicionarCarrinho(id,nome,preco,qtd){
+    let produto = {
+        ID_PRODUTOS: id,
+        NOME_DO_JOGO: nome,
+        PRECO: preco,
+        qtd_produto: qtd,
+        total: preco * qtd
+    }
+    lista_produtos.push(produto)
+    window.localStorage.setItem("carrinho",JSON.stringify(lista_produtos))
+    alert(`O produto: ${nome} foi adiconado ao carrinho`)
+    atualizarCarrinho()
+}
+
+function atualizarCarrinho(){
+    // Quantos elementos  há no carrinho
+    let qtd_itens = localStorage.getItem("carrinho").split(`}`)
+    alert(qtd_itens.length-1)
+    
 }
 
 
@@ -171,14 +204,14 @@ function carregarPagina_Jogos() {
                 <h6 class="card-subtitle mb-2 text-body-secondary">
                 ${item.PLATAFORMA}
                 </h6>
-                <p class="card-text" id="detalhes2">${item.DESCRICAO}</p>
+                <p class="card-text" id="detalhes2" >${item.DESCRICAO}</p>
                 </div>
                 </div>`
 
                 let card_preco = ` <div class="card col-2">
                 <div class="card-body">
                 <h5 class="card-title">R$ ${item.PRECO}</h5>
-                <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+                <a href="#" class="btn btn-primary" onclick="adicionarCarrinho(${item.ID_PRODUTOS},'${item.NOME_DO_JOGO}',${item.PRECO},1)">Adicionar ao Carrinho</a>
                 <a href="#" class="btn btn-warning">Comprar</a>
                 </div>
                 </div> `
@@ -242,11 +275,15 @@ function carregarPagina_Jogos() {
 // ####################################################################################################################################################################### //
 
 function botaoNav(){
-    let plataformaPC = document.getElementById("populares1")
+    let plataformaPC = document.getElementById("PC")
+    plataformaPC =`<div onclick=paginadetalhes(${item.PLATAFORMA})></div>`
 }
 
 function carregarPlataforma() {
 
+
+
+    plataforma = window.location.search.split("=")
 
     const populares1 = document.getElementById("populares1")
     populares1.innerHTML = `<h2>POPULARES</h2> `
@@ -261,7 +298,7 @@ function carregarPlataforma() {
 
     // Vamos fazer um fetch(busca) no backend para
     //obter todos os produtos de lançamentos
-    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma/" + plataforma)
+    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma/" + plataforma[1])
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
@@ -269,7 +306,7 @@ function carregarPlataforma() {
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">${item.NOME_DO_JOGO}</h5>
+                            <h5 class="card-title">${item.NOME_DO_JOGO.substring(0,24)}</h5>
                             <p class="card-text">${item.PLATAFORMA}</p>
                             <h6>${item.PRECO}</h6>
                             <a href="#" onclick="adicionar(${item.ID_PRODUTO})" class="btn btn-primary">Adicionar ao Carrinho</a>
@@ -289,7 +326,7 @@ function carregarPlataforma() {
 
     // Vamos fazer um fetch(busca) no backend para
     //obter todos os produtos de lançamentos
-    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma/")
+    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma/"  + plataforma[1])
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
@@ -297,7 +334,7 @@ function carregarPlataforma() {
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="#">${item.NOME_DO_JOGO}</a></h5>
+                            <h5 class="card-title"><a href="#">${item.NOME_DO_JOGO.substring(0,24)}</a></h5>
                             <p class="card-text">${item.PLATAFORMA}</p>
                             <h6>${item.PRECO}</h6>
                             <a href="#" onclick="adicionar(${item.ID_PRODUTO})" class="btn btn-primary">Adicionar ao Carrinho</a>
@@ -316,7 +353,7 @@ function carregarPlataforma() {
 
     // Vamos fazer um fetch(busca) no backend para
     //obter todos os produtos de lançamentos
-    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma/")
+    fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarplataforma/"  + plataforma[1])
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
@@ -324,7 +361,7 @@ function carregarPlataforma() {
                     <div class="card">
                         <img class="card-img-top" src="${item.FOTO_CAPA}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">${item.NOME_DO_JOGO}</h5>
+                            <h5 class="card-title">${item.NOME_DO_JOGO.substring(0,24)}</h5>
                             <p class="card-text">${item.PLATAFORMA}</p>
                             <h6>${item.PRECO}</h6>
                             <a href="#" onclick="adicionar(${item.ID_PRODUTO})" class="btn btn-primary">Adicionar ao Carrinho</a>
@@ -338,4 +375,25 @@ function carregarPlataforma() {
         })
 
 
+}
+
+
+
+
+const btnPC = document.getElementById("PC")
+btnPC.onclick = () =>{
+    window.location.href="pagina_plataforma.html?plataforma=pc"
+}
+
+const btnXbox = document.getElementById("Xbox")
+btnXbox.onclick = () =>{
+    window.location.href="pagina_plataforma.html?plataforma=Xbox Series X|S"
+}
+const btnPlaystation = document.getElementById("Playstation")
+btnPlaystation.onclick = () =>{
+    window.location.href="pagina_plataforma.html?plataforma=PLAYSTATION-5"
+}
+const btnNintendoSwitch = document.getElementById("nintendo-switch")
+btnNintendoSwitch.onclick = () =>{
+    window.location.href="pagina_plataforma.html?plataforma=Nintendo Switch 2"
 }
