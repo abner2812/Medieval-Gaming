@@ -45,21 +45,23 @@ header {
   align-items: start;
   width: 350px;
   height: 100px;
+  margin-top: -15px;
 }
 
 #busca #pesquisa form {
-  border: 1px solid rgb(100, 73, 0);
+  border: 3px solid rgb(100, 73, 0);
   padding: 10px;
-  width: 700px;
+  width: 600px;
   border-radius: 30px;
   background-color: rgba(85, 83, 83, 0.384);
+  height: 80px;
   
 }
 
 #busca #pesquisa input {
   width: 90%;
-  padding: 5px;
-  border: 0;
+  padding: 2px;
+  border: 12px solid rgba(255, 255, 255, 0);
   background-color: rgba(44, 44, 44, 0);
   outline: none;
   color: white;
@@ -67,14 +69,29 @@ header {
 
 #busca #pesquisa button {
   width: 6%;
-  border: 0;
+  border: 10px;
   background-color: rgba(190, 190, 190, 0);
 }
 
 #busca #pesquisa img {
-  width: 30px;
-  height: 40px;
+  width: 40px;
+  height: 50px;
+  border-radius: 10%;
+  cursor: pointer;
+  box-shadow: transparent;
+  transition: 0.5s ease;
+  user-select: none;
 }
+#busca #pesquisa img:hover,:focus {
+  color: #ffffff;
+  background: #008cff;
+  border-radius: 20px;
+  border: 1px solid #008cff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff; 
+}
+
+
 
 #busca #usuario-compra {
   display: flex;
@@ -84,9 +101,22 @@ header {
   height: 0px;
 }
 
-#usuario-compra a img {
-  width: 50px;
-  height: 60px;
+#usuario-compra  img {
+  width: 60px;
+  height: 80px;
+  border-radius: 10%;
+  cursor: pointer;
+  box-shadow: transparent;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+#usuario-compra img:hover,:focus {
+  color: #ffffff;
+  /* background: #008cff; */
+  border: 1px solid #008cff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff; 
 }
 
 #busca #usuario-compra a {
@@ -94,9 +124,14 @@ header {
   padding: 0 35px;
   text-decoration: none;
   font-size: 10pt;
-  color: rgb(21, 255, 0);
+  color: rgb(255, 255, 255);
   margin-left: 2px;
 
+}
+#busca #usuario-compra a:hover{
+  color: lime;
+  text-decoration: underline;
+  cursor: pointer;
 }
 /*****************************************************************************************************/
 /*****************************************************************************************************/
@@ -584,10 +619,110 @@ footer #aplicativo{
 } 
 
 
- #populares1 h2, #mais_vendidos1 h2, #CATEGORIAS1 h2{
+#populares1 h2, #mais_vendidos1 h2, #CATEGORIAS1 h2{
   display: flex;
   justify-content: center;
   font-size: 36pt;
   margin-top: 15px;
- }
+}
+
+/*==================================== ESTILIZANDO O RODAPÉ [PAGINA_JOGO] ================================== */
+
+/* From Uiverse.io by wilsondesouza */ 
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+  background-color: #128c7e;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #3b5998;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+
 
