@@ -58,7 +58,7 @@ header {
   
 }
 
-#busca #pesquisa input {
+#pesquisa input {
   width: 90%;
   padding: 2px;
   border: 12px solid rgba(255, 255, 255, 0);
@@ -67,13 +67,13 @@ header {
   color: white;
 }
 
-#busca #pesquisa button {
+#pesquisa button {
   width: 6%;
   border: 10px;
   background-color: rgba(190, 190, 190, 0);
 }
 
-#busca #pesquisa img {
+#pesquisa img {
   width: 40px;
   height: 50px;
   border-radius: 10%;
@@ -82,7 +82,7 @@ header {
   transition: 0.5s ease;
   user-select: none;
 }
-#busca #pesquisa img:hover,:focus {
+#pesquisa img:hover,:focus {
   color: #ffffff;
   background: #008cff;
   border-radius: 20px;
@@ -93,7 +93,7 @@ header {
 
 
 
-#busca #usuario-compra {
+ #usuario-compra {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,6 +133,90 @@ header {
   text-decoration: underline;
   cursor: pointer;
 }
+
+
+.dropdown .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+}
+
+
+.dropdown .dropdown-menu:hover {
+  transform: scale(1.05);
+  border: 1px solid black;
+}
+
+.dropdown .dropdown-menu:hover {
+  text-align: center;
+  margin: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+} 
+
+.dropdown .dropdown-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+
+
+.dropdown .dropdown-menu #login {
+  padding: 0.5em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+
+} .dropdown .dropdown-menu #senha {
+  padding: 0.5em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+} 
+
+
+.dropdown .dropdown-menu #logar {
+  padding: 0.5em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+} 
+
+
+
 /*****************************************************************************************************/
 /*****************************************************************************************************/
 /*****************************************************************************************************/
