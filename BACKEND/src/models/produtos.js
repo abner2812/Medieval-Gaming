@@ -32,7 +32,7 @@ const con = require("../database/conexao.js")
 function listar(){
    return new Promise((resolve,reject)=>{
        
-       con.query(`SELECT * FROM produtos ORDER BY nome_do_jogo LIMIT 0,12`,(erro,resultado)=>{
+       con.query(`SELECT * FROM produtos ORDER BY nome_do_jogo LIMIT 0,8`,(erro,resultado)=>{
            if (erro){
             // console.error(erro)
             reject( `Erro ao tentar listar os produtos`)
@@ -96,7 +96,7 @@ function buscarPorId(id){
 
 function pesquisarPlataforma(plataforma){
     return new Promise((resolve,reject)=>{
-        con.query(`SELECT * FROM produtos WHERE plataforma = "${plataforma}" `,(erro,resultado)=>{
+        con.query(`SELECT * FROM produtos WHERE plataforma = "${plataforma} " LIMIT 0,8`,(erro,resultado)=>{
             if (erro){
                 // console.error(erro)
                 reject(`Erro ao tentar listar as produto`)
