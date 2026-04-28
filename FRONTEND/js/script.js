@@ -171,11 +171,11 @@ function carregarPagina_Jogos() {
     let detalhesproduto = document.getElementById("detalhesjogo")
     let linha = `<div class=row class="container">`
 
-    let extras = document.getElementById("extras-jogo")
-    extras.innerHTML = `<h2>Extras</h2>`
+    const extras = document.getElementById("extras-jogo")
+    extras.innerHTML = `<h2> | Extras: </h2>`
 
-    let requisitos = document.getElementById("requisitos-sistema")
-    requisitos.innerHTML = `<h2>requisitos</h2>`
+    const requisitos = document.getElementById("requisitos-sistema")
+    requisitos.innerHTML = `<h2> | Requisitos: </h2>`
 
     fetch("http://127.0.0.1:3001/api/v1/produtos/pesquisarid/" + id[1])
         .then((response) => response.json())
@@ -201,18 +201,19 @@ function carregarPagina_Jogos() {
                 let card_tit_cont = `<div class="card col-4" id="pjogo">
                 <div class="card-body" >
                 <h5 class="card-title" id="detalhes1">${item.NOME_DO_JOGO}</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
+                <h6 class="card-subtitle mb-2 text-body-secondary" id="detalhes3" >
                 ${item.PLATAFORMA}
                 </h6>
                 <p class="card-text" id="detalhes2" >${item.DESCRICAO}</p>
                 </div>
                 </div>`
 
-                let card_preco = ` <div class="card col-2">
+                let card_preco = ` <div class="card col-2" id="ppreco">
                 <div class="card-body">
-                <h5 class="card-title">R$ ${item.PRECO}</h5>
-                <a href="#" class="btn btn-primary" onclick="adicionarCarrinho(${item.ID_PRODUTOS},'${item.NOME_DO_JOGO}',${item.PRECO},1)">Adicionar ao Carrinho</a>
-                <a href="#" class="btn btn-warning">Comprar</a>
+                <h5 class="card-title">R$:<br>${item.PRECO} </h5>
+                <hr>
+                <a href="#" class="btn btn-primary" id="btnCarrinho" onclick="adicionarCarrinho(${item.ID_PRODUTOS},'${item.NOME_DO_JOGO}',${item.PRECO},1)">Adicionar ao Carrinho </a>
+                <a href="#" class="btn btn-warning" id="btnComprar">Comprar </a>
                 </div>
                 </div> `
                 linha += card_img
@@ -232,16 +233,16 @@ function carregarPagina_Jogos() {
         .then((response) => response.json())
         .then((rs) => {
             rs.msg.map((item) => {
-                let listaEX = `<ul class="list-group">
-
+                let listaEX = `<ul class="list-group" id="extras">
                         <li class="list-group-item" >${item.NOME_DO_JOGO}</li>
                         <li class="list-group-item">${item.NOME_DO_EXTRA}</li>
+                        <br>
                     </ul>`
 
                 linhaEX += listaEX
             })
             linhaEX += `</div>`
-            extras.innerHTML = linhaEX
+            extras.innerHTML += linhaEX
         })
 
     let linhaREQ = `<div class="requisitos">`
@@ -260,11 +261,13 @@ function carregarPagina_Jogos() {
                         <li class="list-group-item">${item.VERSAO_DIRECTX}</li>
                         <li class="list-group-item">${item.CONEXAO_INTERNET}</li>
                         <li class="list-group-item">${item.OUTROS}</li>
+                        <br><br>
+                        <p></p>
                     </ul>`
                 linhaREQ += listaREQ
             })
             linhaREQ += `</div>`
-            requisitos.innerHTML = linhaREQ
+            requisitos.innerHTML += linhaREQ
         })
 
 }
@@ -378,7 +381,10 @@ function carregarPlataforma() {
 }
 
 
-
+const btnhome = document.getElementById("logo")
+btnhome.onclick = () =>{
+    window.location.href="index.html"
+}
 
 const btnPC = document.getElementById("PC")
 btnPC.onclick = () =>{
