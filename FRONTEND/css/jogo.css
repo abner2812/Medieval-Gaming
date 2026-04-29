@@ -85,7 +85,7 @@ header {
   user-select: none;
 }
 
-#pesquisa img:hover,
+/* #pesquisa img:hover,
 :focus {
   color: #ffffff;
   background: #008cff;
@@ -93,7 +93,7 @@ header {
   border: 1px solid #008cff;
   box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
     0 0 100px #008cff;
-}
+} */
 
 
 
@@ -115,14 +115,15 @@ header {
   user-select: none;
 }
 
-#usuario-compra img:hover,
+/* background: #008cff; */
+
+/* #usuario-compra img:hover,
 :focus {
   color: #ffffff;
-  /* background: #008cff; */
   border: 1px solid #008cff;
   box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
     0 0 100px #008cff;
-}
+} */
 
 #busca #usuario-compra a {
   text-align: center;
@@ -142,17 +143,19 @@ header {
 
 
 .dropdown .dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: 0.4em;
-  background-color: #f01818;
-  border-radius: 25px;
-  transition: .4s ease-in-out;
+ background-color: #01ff16;
+ margin-left: 15px;
+ margin-right: 15px; 
 }
 
+.dropdown .dropdown-menu li{
+  /* background-color: #01ff16; */
+  color: black;
+ margin-left: 15px;
+ margin-right: 15px;
+
+}
+/*
 .dropdown .dropdown-menu {
   display: flex;
   align-items: center;
@@ -165,7 +168,7 @@ header {
   color: white;
   background-color: #000000a4;
   /* box-shadow: inset 2px 5px 10px rgb(117, 117, 119); */
-}
+/* }
 
 .dropdown .dropdown-menu:hover {
   transform: scale(1.15);
@@ -221,7 +224,7 @@ header {
 }
 
 
-
+ */ 
 
 
 
@@ -594,14 +597,14 @@ footer section #logo-redes .redes img {
   transition: 0.5s ease;
   user-select: none;
 }
-footer section #logo-redes .redes img:hover,
+/* footer section #logo-redes .redes img:hover,
 :focus {
   color: #ffffff;
   background: #008cff;
   border: 1px solid #008cff;
   box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
     0 0 100px #008cff;
-}
+} */
 
 
 

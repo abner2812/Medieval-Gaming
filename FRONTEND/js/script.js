@@ -1,17 +1,17 @@
 
 
 
-fetch("http://127.0.0.1:3001/api/v1/produto/listar")
-    .then((response) => response.json())
-    .then((rs) => {
-        let menu = document.getElementById("menu-categorias")
-        rs.msg.map((item) => {
-            menu.innerHTML += `<li> <a class="dropdown-item" href="categoria.html?id=${item.id_categoria}">${item.titulo_categoria}</a></li>`
-        })
-    })
-    .catch((e) => {
-        console.error(`Erro ao carregar a api -> ${e}`)
-    })
+// fetch("http://127.0.0.1:3001/api/v1/produto/listar")
+//     .then((response) => response.json())
+//     .then((rs) => {
+//         let menu = document.getElementById("menu-categorias")
+//         rs.msg.map((item) => {
+//             menu.innerHTML += `<li> <a class="dropdown-item" href="categoria.html?id=${item.id_categoria}">${item.titulo_categoria}</a></li>`
+//         })
+//     })
+//     .catch((e) => {
+//         console.error(`Erro ao carregar a api -> ${e}`)
+//     })
 
 function paginadetalhes(id) {
     window.location.href = `pagina_jogo.html?id_produto=${id}`
@@ -253,14 +253,14 @@ function carregarPagina_Jogos() {
             rs.msg.map((item) => {
                 let listaREQ = `<ul class="list-group" id="requisitos">
                         <li class="list-group-item">${item.NOME_DO_JOGO}</li>
-                        <li class="list-group-item">${item.PROCESSADOR}</li>
-                        <li class="list-group-item">${item.MEMORIA_RAM}</li>
-                        <li class="list-group-item">${item.SISTEMA_OPERACIONAL}</li>
-                        <li class="list-group-item">${item.PLACA_DE_VIEDO}</li>
-                        <li class="list-group-item">${item.ARMAZENAMENTO}</li>
-                        <li class="list-group-item">${item.VERSAO_DIRECTX}</li>
-                        <li class="list-group-item">${item.CONEXAO_INTERNET}</li>
-                        <li class="list-group-item">${item.OUTROS}</li>
+                        <li class="list-group-item">PROCESSADOR - ${item.PROCESSADOR}</li>
+                        <li class="list-group-item">MEMÓRIA RAM - ${item.MEMORIA_RAM}</li>
+                        <li class="list-group-item">SISTEMA OPERACIONAL - ${item.SISTEMA_OPERACIONAL}</li>
+                        <li class="list-group-item">PLACA DE VIDEO - ${item.PLACA_DE_VIEDO}</li>
+                        <li class="list-group-item">ARMAZENAMENTO - ${item.ARMAZENAMENTO}</li>
+                        <li class="list-group-item">DIRECT X - ${item.VERSAO_DIRECTX}</li>
+                        <li class="list-group-item">CONEXÃO COM A INTERNET - ${item.CONEXAO_INTERNET}</li>
+                        <li class="list-group-item">OUTRO REQUISISTOS: <br>${item.OUTROS}</li>
                         <br><br>
                         <p></p>
                     </ul>`
