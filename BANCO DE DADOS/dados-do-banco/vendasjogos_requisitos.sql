@@ -1,0 +1,2 @@
+
+INSERT INTO `requisitos`(id_produtos,processador,memoria_ram,sistema_operacional,placa_de_video,armazenamento,versao_directx,conexao_internet,outros) VALUES ([],'teste','teste','teste','teste','teste','teste','','teste'),;
