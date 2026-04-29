@@ -1,2 +1,5 @@
 
 INSERT INTO `requisitos`(id_produtos,processador,memoria_ram,sistema_operacional,placa_de_video,armazenamento,versao_directx,conexao_internet,outros) VALUES ([],'teste','teste','teste','teste','teste','teste','','teste'),;
+
+
+(,1,'intel CORE I5 10700','6GB','windows 10/11',' RTX 2070','50GB','10/11','SIM',''),(,76,'Intel Core i5 2400s @ 2.5 GHz or better / AMD FX-6100 @ 3.3 GHz or better',' 2 GB de RAM','Windows 10 (64-bit versions only)','nVidia GeForce GTX 560Ti (1024 VRAM) or better / AMD Radeon HD 6870 (1024 VRAM) or better','12GB','11',NULL,' Supported Video Cards at time of release: NVIDIA GeForce GTS 450 or better, GeForce 500, 600, 700, 900 series / AMD Radeon HD 5670 or better, Radeon HD 6000, 7000, R7, R9 series / Intel HD4600, HD5200 / Note: Laptop versions of these cards may work but are NOT officially supported.');
