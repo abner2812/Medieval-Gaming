@@ -159,7 +159,7 @@
                 <div class="logo">
                     <img src="img/logo1.png" alt="">
                 </div>
-                    <div class="redes">
+                <div class="redes">
                     <img src="img/instagram.png" alt="">
                     <img src="img/facebook.png" alt="">
                     <img src="img/github.png" alt="">
@@ -207,19 +207,28 @@
     </footer>
     <!-- ################################################## FINAL DO RODAPÉ ##################################### -->
     <!-- Modal para cadastrar um novo usuário -->
-     <!-- Modal -->
-    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="tituloCadastrar" Cadatro de Usuárioaria-hidden="true">
+    <!-- Modal -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="tituloCadastrar" Cadatro de
+        Usuárioaria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="tituloCadastrar">Cadatro de Usuário</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                
                 <div class="modal-body">
-                    ...
+                    <ul class="cadastro">
+                        <li><input type="text" id="nome" placeholder="Nome"></li>
+                        <li><input type="text" id="email" placeholder="E-mail"></li>
+                        <li><input type="text" id="celular" placeholder="Celular"></li>
+                        <li><input type="date" id="data_nascimento"></li>
+                        <li><input type="text" id="usuario" placeholder="Usuário"></li>
+                        <li><input type="password" id="senha" placeholder="Senha"></li>
+                    </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Cadastrar</button>
+                    <button type="button" onclick="realizarCadastro()" class="btn btn-primary">Cadastrar</button>
                 </div>
             </div>
         </div>
