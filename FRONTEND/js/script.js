@@ -1,17 +1,6 @@
 
 
 
-// fetch("http://127.0.0.1:3001/api/v1/produto/listar")
-//     .then((response) => response.json())
-//     .then((rs) => {
-//         let menu = document.getElementById("menu-categorias")
-//         rs.msg.map((item) => {
-//             menu.innerHTML += `<li> <a class="dropdown-item" href="categoria.html?id=${item.id_categoria}">${item.titulo_categoria}</a></li>`
-//         })
-//     })
-//     .catch((e) => {
-//         console.error(`Erro ao carregar a api -> ${e}`)
-//     })
 
 function paginadetalhes(id) {
     window.location.href = `pagina_jogo.html?id_produto=${id}`
