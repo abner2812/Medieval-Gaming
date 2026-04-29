@@ -20,7 +20,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0px;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 /*****************************************************************************************************/
@@ -143,9 +143,10 @@ header {
 
 
 .dropdown .dropdown-menu {
- background-color: #01ff16;
+ background-color: #486b79;
  margin-left: 15px;
- margin-right: 15px; 
+ margin-right: 15px;
+ z-index: 2000 !important; 
 }
 
 .dropdown .dropdown-menu li{
@@ -155,6 +156,29 @@ header {
  margin-right: 15px;
 
 }
+
+.modal-header{
+background-color: #486b79;
+
+}
+
+.modal-body{
+background-color: #486b79;
+}
+
+.modal-body .cadastro{
+list-style: none;
+}
+
+
+div .modal-footer{
+background-color: #486b79;
+/* border: 0px; */
+}
+
+
+
+
 /*
 .dropdown .dropdown-menu {
   display: flex;
@@ -253,7 +277,7 @@ header {
 
   position: fixed;
   top: 5px;
-  z-index: 1000;
+  z-index: 900;
   justify-items: center;
   height: 71px;
   width: 100%;
