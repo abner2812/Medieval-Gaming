@@ -216,25 +216,19 @@
                     <h1 class="modal-title fs-5" id="tituloCadastrar">Cadatro de Usuário</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                
                 <div class="modal-body">
                     <ul class="cadastro">
-                        <li><input type="text" name="Nome" id="nome" placeholder="Nome"></li>
-
-                        <li><input type="text" name="Email" id="emai" placeholder="E-mail"></li>
-
-                        <li><input type="text" name="Celular" id="celular" placeholder="Celular"></li>
-
-                        <li><input type="text" name="Data_nacimento" id="data_nacimento" placeholder="Data_nacimento">
-                        
-                        <li><input type="text" name="Usuario" id="usuario" placeholder="Usuário"></li>
-
-                        <li><input type="password" name="password" id="senha" placeholder="Senha"></li>
-                    
-
+                        <li><input type="text" id="nome" placeholder="Nome"></li>
+                        <li><input type="text" id="email" placeholder="E-mail"></li>
+                        <li><input type="text" id="celular" placeholder="Celular"></li>
+                        <li><input type="date" id="data_nascimento"></li>
+                        <li><input type="text" id="usuario" placeholder="Usuário"></li>
+                        <li><input type="password" id="senha" placeholder="Senha"></li>
                     </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Cadastrar</button>
+                    <button type="button" onclick="realizarCadastro()" class="btn btn-primary">Cadastrar</button>
                 </div>
             </div>
         </div>
