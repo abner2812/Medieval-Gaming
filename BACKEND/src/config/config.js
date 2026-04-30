@@ -3,7 +3,7 @@ require("dotenv").config()
  const config={
     host:process.env.DATABASE_IP,
     user:process.env.DATABASE_USER,
-    password:process.env.DTABASE_PASS,
+    password:process.env.DATABASE_PASS,
     port:process.env.DATABASE_PORT,
     database:process.env.DATABASE_NAME
 }
