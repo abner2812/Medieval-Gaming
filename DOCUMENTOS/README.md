@@ -1,12 +1,13 @@
 # PROJETO INTEGRADOR (PI) - TURMA 3 2026
 
-#  NOSSO SITE  - "MEDIEVAL GAMING"
+# NOSSO SITE - "MEDIEVAL GAMING"
 
 ## 🧠 PROJETO DESENVOLVIDO POR:
-*   ABNER [ABNERNUNIS](https://github.com/Abner2812)
-*   PEDRO [PEDRO BEZERRA](https://github.com/pedro-bezerra-da-silva)
-*   EDUARDO [EDUARDO MODE](https://github.com/kayqueFranco)
-*   VITOR [VITOR](https://github.com/kayqueFranco)
+
+- ABNER [ABNERNUNIS](https://github.com/Abner2812)
+- PEDRO [PEDRO BEZERRA](https://github.com/pedro-bezerra-da-silva)
+- EDUARDO [EDUARDO MODE](https://github.com/kayqueFranco)
+- VITOR [VITOR](https://github.com/kayqueFranco)
 
 ## Colaboradores
 
@@ -43,39 +44,41 @@
 
 #### INTERAGIR COM OS USUÁRIOS DE JOGOS PARA OFERECER PRODUTOS RELACIONADOS AOS MELHORES JOGOS DO MERCADO COM MAIS PRATICIDADE MAIS ACESSIVEIS E BARATOS.
 
---- 
+---
+
 ## 🌟 Objetivo do Projeto
 
-* Oferecer uma plataforma digital onde o usuário possa ter acesso a informações e serviços relacionados a jogos.
-* Comprar jogos digitalmente.
-* Ter uma experiência de compra simplificada e segura.
-* Ter acesso mais fácil a jogos de qualidade, com preços competitivos e uma interface amigável.
+- Oferecer uma plataforma digital onde o usuário possa ter acesso a informações e serviços relacionados a jogos.
+- Comprar jogos digitalmente.
+- Ter uma experiência de compra simplificada e segura.
+- Ter acesso mais fácil a jogos de qualidade, com preços competitivos e uma interface amigável.
 
 ---
 
 ## 👥 Público-Alvo
 
-* Pessoas interessadas em jogos online.
-* Estudantes, trabalhadores e qualquer pessoa que deseje jogar e interagir com mundo dos gamers de forma simples e digital.
-* Jogadores entusiastas que buscam uma plataforma confiável para adquirir jogos e interagir com outros jogadores.
+- Pessoas interessadas em jogos online.
+- Estudantes, trabalhadores e qualquer pessoa que deseje jogar e interagir com mundo dos gamers de forma simples e digital.
+- Jogadores entusiastas que buscam uma plataforma confiável para adquirir jogos e interagir com outros jogadores.
 
 # ⚙️Levantamento do Bancos de Dados
-
 
 ## Tabelas
 
 ### Mais Importantes
-*   Clientes
-*   Produtos
-*   Vendas
-*   Estoques
+
+- Clientes
+- Produtos
+- Vendas
+- Estoques
 
 ### Menos Importantes
-*   Histórico de Vendas
-*   Plataformas
-*   Categorias de Jogos
-*   Itens do Carrinho
-*   Usuários
+
+- Histórico de Vendas
+- Plataformas
+- Categorias de Jogos
+- Itens do Carrinho
+- Usuários
 
 ## 🔄 Normalizações
 
@@ -98,13 +101,15 @@ Abaixo estão as etapas de normalização do banco de dados, aplicadas para gara
 ![Normalização 4](PRINT_IMG/imagem4.png)
 
 ## Relacionamentos (Fluxograma da Pagina Web)
+
 <img src="PRINT_IMG/diagrama.png">
 
 ## Modelo Lógico (DER)
+
 <img src="PRINT_IMG/modelo-logico.png">
 
-
 ## 🧱Modelo Físico (SQL)
+
 ```sql
 CREATE DATABASE IF NOT EXISTS VendasJogos;
 USE VendasJogos;
@@ -122,7 +127,7 @@ CREATE TABLE CLIENTES (
 /*
 ATUALIZAÇÃO(05/03/2026): Tabela de produtos
 - alterado o tipo da coluna descricao de: varchar(255) -> text.
-- adicionado 'NOT NULL' nas seguintes colunas: tamanho, descricao, classificacao_indicativa. 
+- adicionado 'NOT NULL' nas seguintes colunas: tamanho, descricao, classificacao_indicativa.
 */
 -- Tabela PRODUTOS
 CREATE TABLE PRODUTOS (
@@ -132,12 +137,12 @@ CREATE TABLE PRODUTOS (
     CLASSIFICACAO_INDICATIVA VARCHAR(30) NOT NULL,
     PRECO DECIMAL(5,2) NOT NULL,
     TAMANHO VARCHAR(200) NOT NULL,
-    DESCRICAO TEXT 
+    DESCRICAO TEXT
 );
 
 /*
 ATUALIZAÇÃO(03/05/2026): Tabela de vendas
-	removidos os itens da tabela: id_clientes, id_produtos, quantidade, preco_unitario, 
+	removidos os itens da tabela: id_clientes, id_produtos, quantidade, preco_unitario,
 */
 -- Tabela VENDAS
 CREATE TABLE VENDAS (
@@ -156,7 +161,7 @@ CREATE TABLE VENDAS (
 
 /*
 ATUALIZAÇÃO(03/05/2026): Adicionar uma nova tabela chamada de 'vendas_detalhes'
-	Itens da tabela: id_vendas_detalhes, id_vendas, id_clientes, id_produtos, quantidade, preco_unitario, 
+	Itens da tabela: id_vendas_detalhes, id_vendas, id_clientes, id_produtos, quantidade, preco_unitario,
 */
 
 
@@ -196,73 +201,84 @@ CREATE TABLE REQUISITOS (
 ## 🛠️PROGRAMAS UTILIZADOS
 
 ### **Backend:**
-* **Node.js:** Ambiente de execução JavaScript.
-* **Express.js:** Framework web para Node.js, para construção das APIs RESTful.
-* **MySQL2:** Driver para conexão e interação com o banco de dados MySQL.
-* **Multer:** Middleware para Node.js para manipulação de `multipart/form-data`, usado no upload de arquivos (fotos de perfil).
-* **CORS:** Middleware para habilitar o Cross-Origin Resource Sharing.
-* **Path:** Módulo nativo do Node.js para manipulação de caminhos de arquivo.
-* **Dotenv:** Módulo para carregar variáveis de ambiente de um arquivo `.env`.
-* **WS (WebSocket):** Biblioteca para implementação de comunicação em tempo real (chat).
+
+- **Node.js:** Ambiente de execução JavaScript.
+- **Express.js:** Framework web para Node.js, para construção das APIs RESTful.
+- **MySQL2:** Driver para conexão e interação com o banco de dados MySQL.
+- **CORS:** Middleware para habilitar o Cross-Origin Resource Sharing.
+- **Path:** Módulo nativo do Node.js para manipulação de caminhos de arquivo.
+- **Dotenv:** Módulo para carregar variáveis de ambiente de um arquivo `.env`.
+- **WS (WebSocket):** Biblioteca para implementação de comunicação em tempo real (chat).
 
 ### **Frontend:**
 
-* **PHOTSHOP:** Wireframe e Modelagem da página.
-* **HTML5:** Estrutura das páginas web.
-* **CSS3:** Estilização e design responsivo da interface do usuário.
-* **JavaScript (Vanilla JS):** Lógica interativa do lado do cliente, requisições de API (`fetch`), manipulação dinâmica do DOM, cálculo de idades.
+- **PHOTSHOP:** Wireframe e Modelagem da página.
+- **HTML5:** Estrutura das páginas web.
+- **CSS3:** Estilização e design responsivo da interface do usuário.
+- **JavaScript:** Lógica interativa do lado do cliente, requisições de API (`fetch`), manipulação dinâmica do DOM, cálculo de idades.
 
 ### **Banco de Dados:**
-* **MySQL:** Sistema de gerenciamento de banco de dados relacional.
+
+- **MySQL:** Sistema de gerenciamento de banco de dados relacional.
 
 ## 🧑‍💻 DESENVOLVIMENTO
 
 ### Backend
-* Configuração do ambiente Node.js e instalação das dependências.
-* Criação do banco de dados MySQL e definição das tabelas.
-* Implementação das rotas RESTful para clientes, produtos, vendas, estoques, histórico de vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
-* Implementação da funcionalidade de upload de fotos de perfil usando Multer.
-         
+
+- Configuração do ambiente Node.js e instalação das dependências.
+- Criação do banco de dados MySQL e definição das tabelas.
+- Implementação das rotas RESTful para clientes, produtos, vendas, estoques, histórico de vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
+- Implementação da funcionalidade de upload de fotos de perfil usando Multer.
+
 ### Frontend
-* Desenvolvimento da interface do usuário usando HTML5 e CSS3.
-* Implementação da lógica interativa usando JavaScript, incluindo requisições de API para o backend, manipulação do DOM e cálculo de idades.
-* Criação de páginas para cadastro,
-login, visualização de produtos, carrinho de compras.
+
+- Desenvolvimento da interface do usuário usando HTML5 e CSS3.
+- Implementação da lógica interativa usando JavaScript, incluindo requisições de API para o backend, manipulação do DOM e cálculo de idades.
+- Criação de páginas para cadastro,
+  login, visualização de produtos, carrinho de compras.
+
 ### Banco de Dados
-* Criação do banco de dados e definição das tabelas com os relacionamentos adequados.
-* Inserção de dados de teste para clientes, produtos, vendas, estoques, histórico de
-vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
+
+- Criação do banco de dados e definição das tabelas com os relacionamentos adequados.
+- Inserção de dados de teste para clientes, produtos, vendas, estoques, histórico de
+  vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
 
 ## 🧪 TESTES
 
-* Testes unitários para as rotas do backend usando ferramentas como Jest ou Mocha.
-* Testes de integração para verificar a comunicação entre o frontend e o backend.
-* Testes de usabilidade para garantir que a interface do usuário seja intuitiva e fácil de usar.
-* Testes de carga para avaliar o desempenho do sistema sob diferentes condições de uso.
+- Testes unitários para as rotas do backend usando ferramentas.
+
+- Testes de integração para verificar a comunicação entre o frontend e o backend.
+- Testes de usabilidade para garantir que a interface do usuário seja intuitiva e fácil de usar.
+- Testes de carga para avaliar o desempenho do sistema sob diferentes condições de uso.
 
 ## 🚀 DEPLOYMENT
-* Configuração do ambiente de produção para o backend (por exemplo, usando Heroku ou AWS).
-* Configuração do ambiente de produção para o frontend (por exemplo, usando Netlify ou Vercel).
-* Configuração do banco de dados em um serviço de hospedagem (por exemplo, usando Amazon RDS ou Google Cloud SQL).
-* Implementação de práticas de segurança, como uso de HTTPS, proteção contra ataques de injeção SQL e autenticação segura.
+
+- Configuração do ambiente de produção para o backend (por exemplo, usando Heroku ou AWS).
+- Configuração do ambiente de produção para o frontend (por exemplo, usando Netlify ou Vercel).
+- Configuração do banco de dados em um serviço de hospedagem (por exemplo, usando Amazon RDS ou Google Cloud SQL).
+- Implementação de práticas de segurança, como uso de HTTPS, proteção contra ataques de injeção SQL e autenticação segura.
 
 ## 📈 MONITORAMENTO E MANUTENÇÃO
-* Monitoramento do desempenho do sistema usando ferramentas como New Relic ou Datadog.
-* Implementação de um sistema de logs para rastrear erros e atividades do usuário.
-* Atualizações regulares para corrigir bugs, melhorar a segurança e adicionar novas funcionalidades com base no feedback dos usuários.
-* Suporte ao cliente para resolver problemas e responder a perguntas dos usuários.
+
+- Monitoramento do desempenho do sistema usando ferramentas como New Relic ou Datadog.
+- Implementação de um sistema de logs para rastrear erros e atividades do usuário.
+- Atualizações regulares para corrigir bugs, melhorar a segurança e adicionar novas funcionalidades com base no feedback dos usuários.
+- Suporte ao cliente para resolver problemas e responder a perguntas dos usuários.
 
 ## 📊 ANÁLISE DE DADO
-* Coleta de dados de uso do sistema para entender o comportamento dos usuários e identificar áreas de melhoria.
-* Análise de dados para otimizar a experiência do usuário e aumentar as vendas.
-* Implementação de ferramentas de análise, como Google Analytics, para monitorar o tráfego do site e o comportamento dos usuários.
+
+- Coleta de dados de uso do sistema para entender o comportamento dos usuários e identificar áreas de melhoria.
+- Análise de dados para otimizar a experiência do usuário e aumentar as vendas.
+- Implementação de ferramentas de análise, como Google Analytics, para monitorar o tráfego do site e o comportamento dos usuários.
 
 # 📄 ESTRUTURA DO NOSSO SITE
 
 ## WIREFRAMES
+
 ### Wireframes das principais páginas do site, mostrando a estrutura e o layout planejados para cada seção.
 
 #### 1. Página Inicial do Site / 2.Plataforma do Jogo / 3.Informações do Jogo.
+
 <tr>
     <td>1
         <img src="PRINT_IMG/PAGINA INICIAL DO SITE.png" alt="Wireframe da Página Inicial" width="220px">
@@ -284,61 +300,41 @@ vendas, plataformas, categorias de jogos, itens do carrinho e usuários.
 <img src="PRINT_IMG/compra.png" alt="Wireframe da Página Inicial" width="300px">
 
 #
-* Link do site: https://medieval-gaming.netlify.app/
 
+- Link do site: https://medieval-gaming.netlify.app/
 
-* Link do repositório:
+- Link do repositório:
+
 # Telas Iniciais e Navegação
 
-Visualizações da página principal da aplicação, mostrando diferentes layouts ou conteúdos.
+Visualizações da página principal, mostrando diferentes layouts ou conteúdos.
 
-* **`pagina_inicial.png`**
-    [![Página Inicial](./img/pagina_inicial.png)](./img/pagina_inicial.png)
-    A primeira visualização da aplicação após o login ou acesso inicial.
+- **`pagina_principal.png`**
 
-* **`pagina_inicial2.png`**
-    [![Página Inicial - Variação 2](./img/pagina_inicial2.png)](./img/pagina_inicial2.png)
-    Uma variação ou diferente estado da página inicial.
+    <img src="PRINT_IMG/tela_principal.png" alt="Wireframe da Página Inicial" width="500px">
 
-* **`pagina_inicial3.png`**
-    [![Página Inicial - Variação 3](./img/pagina_inicial3.png)](./img/pagina_inicial3.png)
-    Outra variação da página principal, possivelmente com diferentes elementos ou destaque.
+  A primeira visualização da plataforma após clicar no botão menu da plataforma PC.
 
-* **`pagina_inicial4.png`**
-    [![Página Inicial - Variação 4](./img/pagina_inicial4.png)](./img/pagina_inicial4.png)
-    Mais uma visualização da página inicial, mostrando a evolução do design ou conteúdo.
+- **`pagina_da_plataforma.png`**
 
-### Perfil e Listagem
+    <img src="PRINT_IMG/tela_principal.png" alt="Wireframe da Página Inicial" width="500px">
 
-Telas dedicadas à visualização e gestão de perfis.
+    A primeira visualização da plataforma após clicar no botão menu da plataforma PC.
 
-* **`perfil_idoso.png`**
-    [![Tela de Perfil do Idoso](./img/perfil_idoso.png)](./img/perfil_idoso.png)
-    Página de visualização detalhada do perfil de um idoso, exibindo suas informações e necessidades.
+- **`pagina_login.png`**
 
-* **`listar_idosos.png`**
-    [![Tela de Listagem de Idosos](./img/listar_idosos.png)](./img/listar_idosos.png)
-    Interface que apresenta uma lista ou carrossel de idosos disponíveis para interação.
+    <img src="PRINT_IMG/tela_login.png" alt="Wireframe da Página Inicial" width="300px">
 
-* **`editar_perfil.png`**
-    [![Tela de Edição de Perfil](./img/editar_perfil.png)](./img/editar_perfil.png)
-    Formulário para o usuário realizar alterações em seu próprio perfil cadastrado.
+  Outra variação da página de login, com diferentes elementos de classificação simples.
 
-### Outras Telas Úteis
+- **`pagina_cadastro.png`**
 
-Telas que apoiam funcionalidades específicas da plataforma.
+    <img src="PRINT_IMG/tela_cadastro.png" alt="Wireframe da Página Inicial" width="300px">
 
-* **`pagina_msg.png`**
-    [![Página de Mensagens](./img/pagina_msg.png)](./img/pagina_msg.png)
-    Interface de chat ou sistema de mensagens para comunicação entre usuários.
+ 
+  Visualização da página de cadastro, mostrando a evolução do design e conteúdo.
 
-* **`pagina_salvo.png`**
-    [![Página de Sucesso/Salvo](./img/pagina_salvo.png)](./img/pagina_salvo.png)
-    Uma tela de confirmação, geralmente exibida após uma ação bem-sucedida (ex: cadastro, edição).
-
-
-
-```    
+```
 
 ## 🎯 CONCLUSÃO
 O projeto "Medieval Gaming" tem como objetivo criar uma plataforma de comércio eletrônico para jogos, oferecendo uma experiência interativa e acessível para os usuários. Com um backend robusto, um frontend intuitivo e um banco de dados bem estruturado, o sistema visa atender às necessidades dos clientes e proporcionar uma experiência de compra agradável. A implementação de testes, deployment e monitoramento garantirá a qualidade e a manutenção contínua do sistema, enquanto a análise de dados permitirá otimizar a experiência do usuário
@@ -346,3 +342,4 @@ e aumentar as vendas. O sucesso do projeto dependerá da colaboração eficaz en
 
 
 
+```
